@@ -1,0 +1,23 @@
+.spm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.spm__side {
+    @include grid-width(12);
+
+    @include breakpoint($bp-tablet) {
+        @include grid-width(3);
+    }
+}
+
+.spm__main {
+    @include grid-width(12);
+    margin-top: -4rem;
+    position: relative;
+    @include breakpoint($bp-tablet) {
+        @include grid-width(9);
+        order: 2;
+    }
+}

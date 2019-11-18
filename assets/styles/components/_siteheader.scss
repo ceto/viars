@@ -1,0 +1,120 @@
+.sticky--siteheader {
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint(large) {
+        background-color: $cl-body-background;
+
+        &.is-stuck {
+            box-shadow: 0 0 1rem 0 rgba($cl-primary-xlight, 0.5);
+        }
+    }
+
+    will-change: transform;
+    transition: transform 0.3s linear;
+
+    &.is-stuck.headroom--unpinned {
+        transform: translateY(-100%);
+    }
+
+    &.is-stuck.headroom--pinned {
+        transform: translateY(0%);
+    }
+}
+
+.siteheader {
+    @extend .grid-container;
+
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint(xlarge) {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .menutoggler {
+        margin-bottom: 0;
+        @extend .button;
+
+        padding: 0.5em 1em 0.5em;
+        margin-bottom: 0;
+        font-size: 0.666rem;
+        background-color: get-color(warning);
+    }
+
+    .is-stuck & {
+        // padding-top: 0;
+        // padding-bottom: 0;
+    }
+}
+
+.siteheader__brand {
+    display: inline-block;
+    height: rem-calc(55, 18);
+    width: rem-calc(220, 18);
+    //max-width: 18%;
+    background-image: url(../images/helsinkilogomono.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: left center;
+
+    filter: invert(24%) sepia(9%) saturate(4653%) hue-rotate(188deg) brightness(96%) contrast(98%);
+    //filter: invert(7%) sepia(99%) saturate(4591%) hue-rotate(215deg) brightness(59%) contrast(98%);
+    //filter: invert(35%) sepia(96%) saturate(1559%) hue-rotate(210deg) brightness(104%) contrast(101%);
+    &:hover,
+    &:focus {
+        // filter: invert(24%) sepia(9%) saturate(4653%) hue-rotate(188deg) brightness(96%)
+        //     contrast(98%);
+        //filter: invert(7%) sepia(99%) saturate(4591%) hue-rotate(215deg) brightness(59%) contrast(98%);
+        filter: invert(35%) sepia(96%) saturate(1559%) hue-rotate(210deg) brightness(104%)
+            contrast(101%);
+    }
+
+    @extend .hide-text;
+
+    .is-stuck & {
+        opacity: 0;
+    }
+
+    @include breakpoint(large) {
+        height: rem-calc(55, 18);
+        width: rem-calc(250, 18);
+        max-width: 20%;
+
+        .is-stuck & {
+            opacity: 1;
+        }
+    }
+
+    @include breakpoint(xlarge) {
+        max-width: 18%;
+    }
+}
+
+.siteheader__nav {
+    //margin-left: auto;
+
+    @include breakpoint(medium down) {
+        display: none;
+    }
+}
+
+.siteheader__actions {
+    margin-left: auto;
+
+    @include breakpoint(tablet) {
+        margin-left: initial;
+    }
+}
+
+.siteheader__mobileactions {
+    margin-left: 0.875rem;
+
+    @include breakpoint(tablet) {
+        display: none;
+    }
+}

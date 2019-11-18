@@ -1,0 +1,194 @@
+.masthead {
+    @extend .grid-container;
+
+    position: relative;
+    min-height: 42vw;
+    display: flex;
+    align-items: center;
+
+    @include breakpoint($bp-xlarge) {
+        min-height: 37vw;
+    }
+
+    @include breakpoint($bp-bigdesktop) {
+        min-height: 32rem;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        width: 100vw;
+        top: 0;
+        height: 100%;
+        transform: translateX(-50%);
+        //background-color: get-color("secondary");
+    }
+
+    &.valbtm {
+        align-items: flex-end;
+    }
+}
+
+.masthead--wide {
+    min-height: 60vw;
+
+    @include breakpoint($bp-large) {
+        min-height: 49vw;
+    }
+
+    @include breakpoint($bp-bigdesktop) {
+        min-height: calc(100vh - 9rem);
+    }
+}
+.masthead--narrow {
+    min-height: 42vw;
+
+    @include breakpoint($bp-large) {
+        min-height: 30vw;
+    }
+
+    @include breakpoint($bp-bigdesktop) {
+        min-height: 25rem;
+    }
+}
+
+.masthead__content {
+    position: relative;
+    z-index: 1;
+    margin: 4rem 0;
+    //padding: 2.5%;
+    min-width: 66%;
+    max-width: 90%;
+    width: 33rem;
+    //background-color: #fff;
+    //color: #fff;
+    a {
+        color: inherit;
+    }
+
+    @include breakpoint(tablet) {
+        //max-width: 45rem;
+    }
+}
+.valbtm .masthead__content {
+    //margin-bottom: -5.333rem;
+    @include breakpoint($bp-tablet) {
+        margin-left: 25.56%;
+    }
+}
+
+.masthead__title {
+    display: inline;
+    font-size: 2.5rem;
+    line-height: 1.253261875;
+    font-weight: $global-weight-bold;
+    margin: 0 0;
+    box-decoration-break: clone;
+
+    background-color: #fff;
+    color: $cl-secondary;
+    background-color: $cl-primary;
+    color: #fff;
+
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    padding-top: 0.15333em;
+    padding-bottom: 0.025em;
+
+    @include breakpoint(tablet) {
+        font-size: 3.5rem;
+    }
+    @include breakpoint(xlarge) {
+        font-size: 4rem;
+    }
+}
+
+.masthead__caption {
+    font-size: 1.125rem;
+}
+.masthead__lead {
+    //max-width: 25em;
+
+    p {
+        margin: 0;
+    }
+}
+
+.masthead__actions {
+    position: absolute;
+    top: 100%;
+    width: 113%;
+    margin-top: 0.5rem;
+}
+
+.masthead__action {
+    font-size: 0.75rem;
+
+    @include breakpoint(tablet) {
+        font-size: rem-calc(14px, 18px);
+    }
+}
+
+.masthead__bg {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    bottom: 0;
+    width: 90vw;
+    background-image: linear-gradient(180deg, get-color(warning) 0%, get-color(warning) 50%);
+    // mask-image: url(../images/parallelogrambig.svg);
+    // mask-repeat: no-repeat;
+    // mask-position: left center;
+    // mask-size: auto;
+
+    @include breakpoint(tablet) {
+        left: 25%;
+        width: 75vw;
+    }
+
+    img {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        filter: grayscale(1);
+        mix-blend-mode: multiply;
+    }
+}
+
+.masthead__bg--wide {
+    left: 0;
+    width: 100vw;
+
+    @include breakpoint(tablet) {
+        left: 3%;
+        right: 3%;
+        width: auto;
+    }
+
+    @include breakpoint(xxlarge) {
+        left: 2%;
+        width: 97%;
+    }
+}
+
+.masthead__bg--fullwidth {
+    left: 0;
+    width: 100vw;
+
+    @include breakpoint(tablet) {
+        left: 50%;
+        right: 0;
+        width: 100vw;
+        transform: translateX(-50%);
+    }
+
+    @include breakpoint(xxlarge) {
+        left: 50%;
+
+        width: 100vw;
+        transform: translateX(-50%);
+    }
+}

@@ -1,0 +1,124 @@
+.postcard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.postcard__peak,
+.postcard__tail {
+    @include grid-width(12);
+
+    @include breakpoint($bp-tablet) {
+        @include grid-width(6);
+    }
+}
+
+.postcard__peak {
+    @include breakpoint($bp-large) {
+        padding-right: 7%;
+
+        @include grid-width(7);
+    }
+}
+
+.postcard__tail {
+    @include breakpoint($bp-tablet) {
+        padding-top: 1.5rem;
+    }
+
+    @include breakpoint($bp-large) {
+        @include grid-width(5);
+        padding-top: 0;
+    }
+}
+
+.postcard__updated {
+    display: block;
+    //text-transform: uppercase;
+    font-size: 0.875rem;
+    margin: 0 0 0.25em;
+    line-height: 1;
+    min-height: 1.25rem;
+}
+
+.postcard__title {
+    font-size: 1.5rem;
+    margin: 0 0 0.5em;
+    color: $cl-secondary;
+    line-height: 1.2;
+
+    @include breakpoint($bp-large) {
+        font-size: 2.3666rem;
+        margin-bottom: 1em;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        line-height: 1.253261875;
+        box-decoration-break: clone;
+
+        // background-color: #fff;
+        // color: $cl-secondary;
+        background-color: $cl-secondary;
+        color: #fff;
+
+        padding-left: 0.25em;
+        padding-right: 0.25em;
+        padding-top: 0.15333em;
+        padding-bottom: 0.025em;
+
+        &:hover,
+        &:focus {
+            //text-decoration: underline;
+            background-color: $cl-primary;
+            //color: $cl-primary;
+        }
+    }
+}
+
+.postcard__metablock {
+    line-height: 1.4;
+    font-family: $fontsans;
+    font-weight: $fw-bold;
+    opacity: 0.8;
+    a {
+        color: inherit;
+    }
+}
+
+.postcard__excerpt {
+    font-size: 0.9375rem;
+    //font-style: italic;
+
+    .readmore {
+        display: block;
+        margin-top: 1em;
+        display: none;
+    }
+}
+
+.postcard__readmore {
+    display: inline-block;
+    font-size: 0.875em;
+    //margin-top: 1em;
+    color: inherit;
+}
+
+.postcardlist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+        display: block;
+        margin: 0;
+        padding: 0;
+        margin-bottom: $layout-gutter-width;
+        padding-bottom: $layout-gutter-width;
+        border-bottom: 1px dotted $cl-primary-xlight;
+    }
+}

@@ -1,0 +1,77 @@
+html {
+    font-size: $font-globalsize * 0.875;
+
+    @include breakpoint($bp-large) {
+        font-size: $font-globalsize * 0.9375;
+    }
+
+    @include breakpoint($bp-bigdesktop) {
+        font-size: $font-globalsize;
+    }
+
+    @include breakpoint($bp-xxxlarge) {
+        font-size: $font-globalsize * 1.25;
+    }
+}
+
+body {
+    //background-color: $cl-primary-xlight;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.grid-container {
+    @include breakpoint(xlarge down) {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    &.narrow {
+        max-width: $layout-content * 0.875;
+
+        @include breakpoint($bp-xxxlarge) {
+            max-width: $layout-content * 0.875 * 1.125;
+        }
+    }
+
+    &.xnarrow {
+        max-width: $layout-content * 0.666;
+
+        @include breakpoint($bp-xxxlarge) {
+            max-width: $layout-content * 0.666 * 1.125;
+        }
+    }
+}
+
+.has-overflowelement {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+img {
+    image-rendering: -webkit-optimize-contrast;
+}
+
+//Transition Extends
+
+[data-aos="fade-up-small"] {
+    transform: translate3d(0, 2rem, 0);
+}
+
+[data-aos="fade-down-small"] {
+    transform: translate3d(0, -2rem, 0);
+}
+
+[data-aos="fade-left-small"] {
+    transform: translate3d(2rem, 0, 0);
+}
+
+[data-aos="fade-right-small"] {
+    transform: translate3d(-2rem, 0, 0);
+}
