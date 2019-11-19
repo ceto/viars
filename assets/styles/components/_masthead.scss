@@ -23,7 +23,7 @@
         top: 0;
         height: 100%;
         transform: translateX(-50%);
-        //background-color: get-color("secondary");
+        background-color: $cl-dark;
     }
 
     &.valbtm {
@@ -54,6 +54,18 @@
     }
 }
 
+.masthead--stripe {
+    min-height: 3rem;
+
+    @include breakpoint($bp-large) {
+        min-height: 4rem;
+    }
+
+    @include breakpoint($bp-bigdesktop) {
+        min-height: 5rem;
+    }
+}
+
 .masthead__content {
     position: relative;
     z-index: 1;
@@ -81,7 +93,7 @@
 
 .masthead__title {
     display: inline;
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 1.253261875;
     font-weight: $global-weight-bold;
     margin: 0 0;
@@ -100,13 +112,23 @@
     @include breakpoint(tablet) {
         font-size: 3.5rem;
     }
-    @include breakpoint(xlarge) {
-        font-size: 4rem;
-    }
 }
 
 .masthead__caption {
-    font-size: 1.125rem;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    //font-family: $fontbanner;
+    font-weight: $global-weight-bold;
+    margin: 0 0;
+    color: #fff;
+
+    > p {
+        line-height: inherit;
+    }
+
+    @include breakpoint(tablet) {
+        font-size: 1.666rem;
+    }
 }
 .masthead__lead {
     //max-width: 25em;
@@ -137,11 +159,7 @@
     left: 10%;
     bottom: 0;
     width: 90vw;
-    background-image: linear-gradient(180deg, get-color(warning) 0%, get-color(warning) 50%);
-    // mask-image: url(../images/parallelogrambig.svg);
-    // mask-repeat: no-repeat;
-    // mask-position: left center;
-    // mask-size: auto;
+    //background-image: linear-gradient(180deg, $cl-primary 0%, $cl-primary-dark 50%);
 
     @include breakpoint(tablet) {
         left: 25%;
@@ -153,8 +171,8 @@
         object-fit: cover;
         width: 100%;
         height: 100%;
-        filter: grayscale(1);
-        mix-blend-mode: multiply;
+        //filter: grayscale(1);
+        //mix-blend-mode: multiply;
     }
 }
 

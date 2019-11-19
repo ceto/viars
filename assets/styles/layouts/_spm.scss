@@ -4,20 +4,23 @@
     justify-content: space-between;
 }
 
+.spm__main {
+    @include grid-width(12);
+    @include breakpoint($bp-tablet) {
+        @include grid-width(8);
+    }
+    @include breakpoint($bp-large) {
+        @include grid-width(8);
+    }
+}
+
 .spm__side {
     @include grid-width(12);
 
     @include breakpoint($bp-tablet) {
-        @include grid-width(3);
+        @include grid-width(4);
     }
-}
-
-.spm__main {
-    @include grid-width(12);
-    margin-top: -4rem;
-    position: relative;
-    @include breakpoint($bp-tablet) {
-        @include grid-width(9);
-        order: 2;
+    @include breakpoint($bp-large) {
+        @include grid-width(4);
     }
 }

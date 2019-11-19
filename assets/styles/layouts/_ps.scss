@@ -8,6 +8,16 @@
     padding-bottom: 4rem;
 }
 
+.ps--stripe {
+    @include breakpoint(large) {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
 .ps--narrow {
     @include breakpoint(large) {
         padding-top: 5vh;
@@ -85,7 +95,7 @@
 
 .ps--light {
     border-color: scale-color(#000, $lightness: 95%);
-    background-color: scale-color(#000, $lightness: 97%);
+    background-color: $cl-gray-xlight;
 }
 
 .ps--hasbgimg {

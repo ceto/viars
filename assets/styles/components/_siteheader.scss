@@ -1,3 +1,15 @@
+.toprow {
+    @extend .grid-container;
+    font-size: 0.666rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    font-weight: $fw-medium;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: -0.333rem;
+}
 .sticky--siteheader {
     position: relative;
     z-index: 1;
@@ -24,16 +36,17 @@
 
 .siteheader {
     @extend .grid-container;
-
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+    padding-top: 0;
+    padding-bottom: 0;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
 
     @include breakpoint(xlarge) {
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
+        padding-top: 0rem;
+        padding-bottom: 0;
     }
 
     .menutoggler {
@@ -54,24 +67,20 @@
 
 .siteheader__brand {
     display: inline-block;
-    height: rem-calc(55, 18);
-    width: rem-calc(220, 18);
+    height: 4rem;
+    width: 7rem;
     //max-width: 18%;
-    background-image: url(../images/helsinkilogomono.svg);
+    background-image: url(../images/logo.svg);
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: left center;
+    background-size: contain;
+    background-position: center;
+    background-color: #fff;
+    border: 0.5rem solid #fff;
+    box-shadow: 0 2rem 1rem -2rem rgba(#000, 0.5);
+    margin-bottom: -2rem;
 
-    filter: invert(24%) sepia(9%) saturate(4653%) hue-rotate(188deg) brightness(96%) contrast(98%);
-    //filter: invert(7%) sepia(99%) saturate(4591%) hue-rotate(215deg) brightness(59%) contrast(98%);
-    //filter: invert(35%) sepia(96%) saturate(1559%) hue-rotate(210deg) brightness(104%) contrast(101%);
     &:hover,
     &:focus {
-        // filter: invert(24%) sepia(9%) saturate(4653%) hue-rotate(188deg) brightness(96%)
-        //     contrast(98%);
-        //filter: invert(7%) sepia(99%) saturate(4591%) hue-rotate(215deg) brightness(59%) contrast(98%);
-        filter: invert(35%) sepia(96%) saturate(1559%) hue-rotate(210deg) brightness(104%)
-            contrast(101%);
     }
 
     @extend .hide-text;
@@ -81,8 +90,8 @@
     }
 
     @include breakpoint(large) {
-        height: rem-calc(55, 18);
-        width: rem-calc(250, 18);
+        height: 5.333rem;
+        width: 9rem;
         max-width: 20%;
 
         .is-stuck & {

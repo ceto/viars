@@ -4,12 +4,12 @@
         <h1 class="masthead__title"><?= Titles\title(); ?></h1>
         <div class="masthead__caption"><?php the_excerpt(); ?></div>
         <div class="masthead__actions">
-            <a href="#contentstart" class="masthead__action button hollow"><?php _e('Részletek', 'cadcam'); ?></a>
+            <a href="#contentstart" class="masthead__action button hollow"><?php _e('Részletek', 'viars'); ?></a>
         </div>
     </div>
-    <figure class="masthead__bg">
+    <figure class="masthead__bg masthead__bg--fullwidth">
         <?php if(has_post_thumbnail()) : the_post_thumbnail('xlarge'); else: ?>
-            <img src="https://source.unsplash.com/1600x600/?rights,crowd,protest" alt="">
+        <img src="https://source.unsplash.com/1600x600/?truck,lorry" alt="">
         <?php endif; ?>
     </figure>
 </header>

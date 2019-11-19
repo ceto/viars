@@ -5,7 +5,7 @@ h4,
 h5,
 h6 {
     .bodycopy & {
-        color: $cl-secondary;
+        color: $cl-primary;
         &:first-child() {
             margin-bottom: 0.75em;
         }
@@ -13,7 +13,7 @@ h6 {
 }
 
 .bodycopy {
-    font-size: 1.25rem;
+    //font-size: 1.25rem;
     .lead,
     .lead p {
         margin-bottom: 0;
@@ -37,8 +37,8 @@ h6 {
         }
     }
     > * {
-        margin-left: auto;
-        margin-right: auto;
+        // margin-left: auto;
+        // margin-right: auto;
         max-width: $layout-content * 0.666;
 
         @include breakpoint($bp-xxxlarge) {
@@ -193,4 +193,36 @@ label {
         width: 100%;
         height: 100%;
     }
+}
+
+.tnhead {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.5rem solid $cl-primary;
+}
+.tntitle {
+    font-weight: $fw-bold;
+    text-transform: uppercase;
+    font-size: 3.25rem;
+    letter-spacing: -0.0125em;
+    margin: 0;
+    line-height: 1.2;
+    em {
+        font-weight: $fw-light;
+        font-style: normal;
+        color: $cl-primary;
+        margin-left: -0.125em;
+    }
+}
+
+.tapetitle {
+    line-height: 1.2;
+    font-weight: $fw-normal;
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    display: inline-block;
+    border-bottom: 0.333rem solid $cl-primary;
+    border-top: 0.333rem solid transparent;
+    margin: 0;
+    padding: 0;
 }

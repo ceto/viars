@@ -1,6 +1,7 @@
 //Fonts
 $fontsans: "Roboto", sans-serif;
-$font-globalsize: 18px;
+$fontbanner: "Roboto Condensed", sans-serif;
+$font-globalsize: 16px;
 
 $cl-dark: #323132;
 $cl-gray: #464749;
@@ -15,8 +16,9 @@ $cl-alert: #ef4242;
 $cl-body-background: #fff;
 $cl-body-font-color: $cl-gray;
 
+$fw-light: 300;
 $fw-normal: 400;
-$fw-medium: 300;
+$fw-medium: 500;
 $fw-bold: 700;
 
 // Layout / Grid
