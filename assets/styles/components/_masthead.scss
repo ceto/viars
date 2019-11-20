@@ -97,7 +97,7 @@
     //background-color: #fff;
     //color: #fff;
     a {
-        color: inherit;
+        //color: inherit;
     }
 
     @include breakpoint(tablet) {
@@ -127,24 +127,30 @@
     padding-bottom: 0.025em;
 
     @include breakpoint(tablet) {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 }
 
 .masthead__caption {
-    font-size: 1.5rem;
-    line-height: 1.2;
-    //font-family: $fontbanner;
-    font-weight: $global-weight-bold;
-    margin: 0 0;
-    color: #fff;
-
-    > p {
-        line-height: inherit;
-    }
-
+    font-size: 1.125rem;
+    max-width: 20em;
     @include breakpoint(tablet) {
-        font-size: 1.666rem;
+        font-size: 1.333rem;
+    }
+    > p {
+        display: inline;
+        font-size: inherit;
+        line-height: 1;
+        font-weight: $global-weight-bold;
+        margin: 0 0;
+        box-decoration-break: clone;
+        background-color: #fff;
+        color: $cl-body-font-color;
+
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        padding-top: 0.15333em;
+        padding-bottom: 0.025em;
     }
 }
 .masthead__lead {
@@ -163,10 +169,9 @@
 }
 
 .masthead__action {
-    font-size: 0.75rem;
-
     @include breakpoint(tablet) {
-        font-size: rem-calc(14px, 18px);
+        //font-size: 1.25rem;
+        //background-color: $cl-dark;
     }
 }
 

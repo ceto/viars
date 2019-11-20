@@ -4,7 +4,7 @@
         <h1 class="masthead__title"><?= Titles\title(); ?></h1>
         <div class="masthead__caption"><?php the_excerpt(); ?></div>
         <div class="masthead__actions">
-            <a href="#contentstart" class="masthead__action button hollow"><?php _e('Részletek', 'viars'); ?></a>
+            <a href="#contentstart" class="masthead__action button"><?php _e('Részletek', 'viars'); ?></a>
         </div>
     </div>
     <figure class="masthead__bg masthead__bg--fullwidth">

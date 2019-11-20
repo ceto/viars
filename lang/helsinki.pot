@@ -16,3 +16,11 @@ msgstr ""
 #: template-custom.php:3
 msgid "Custom Template"
 msgstr ""
+
+#: tmpl-aboutrent.php:3
+msgid "About Rent - Info page with advatages"
+msgstr ""
+
+#: tmpl-contact.php:3
+msgid "Contact Template"
+msgstr ""

@@ -1,0 +1,76 @@
+.vehiclecard {
+    display: grid;
+    grid-gap: $layout-gutter-width/2 $layout-gutter-width;
+    grid-template-columns: 1fr;
+    max-width: 32rem;
+    margin: 0 auto;
+    @include breakpoint(tablet) {
+        grid-template-columns: 25% 1fr;
+        max-width: none;
+    }
+}
+
+.vehiclecard__fig {
+    // a {
+    //     display: block;
+    // }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.vehiclecard__details {
+    display: flex;
+    justify-content: space-between;
+    height: calc(100% - 2.666rem);
+}
+
+.vehiclecard__details__one {
+    padding: $layout-gutter-width/4 $layout-gutter-width/2;
+}
+
+.vehiclecard__details__two {
+    position: relative;
+    padding: $layout-gutter-width/4 $layout-gutter-width/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .button {
+        margin: 0 #{0-$layout-gutter-width/2} #{0-$layout-gutter-width/4} 0;
+    }
+}
+
+.vehiclecard__title {
+    background-color: $cl-gray-xlight;
+    font-size: 1.125rem;
+    line-height: 1.2;
+    padding: $layout-gutter-width/4 $layout-gutter-width/2;
+    text-transform: uppercase;
+    a {
+        color: inherit;
+        &:hover,
+        &:focus {
+            color: $cl-primary;
+        }
+    }
+}
+
+.vehiclelist {
+    list-style: none;
+    margin: 0 0;
+    padding: 0;
+
+    > li {
+        display: block;
+        margin: 0;
+        padding: 0;
+
+        &:not(:last-child()) {
+            border-bottom: 1px solid $cl-gray-xlight;
+            padding-bottom: $layout-gutter-width * 1.5;
+            margin-bottom: $layout-gutter-width * 1.5;
+        }
+    }
+}
