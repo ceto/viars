@@ -1,0 +1,39 @@
+.advantagecard {
+    position: relative;
+    figure {
+        position: absolute;
+        width: 3rem;
+        height: 3rem;
+        background-color: $cl-primary;
+        border-radius: 4px;
+        //float: left;
+        margin: 0 0.75rem 0.25rem 0;
+    }
+
+    h3 {
+        text-transform: uppercase;
+        font-size: 1.33325rem;
+        margin: 0 0 0.25rem 3.5rem;
+        min-height: 3rem;
+        vertical-align: baseline;
+    }
+
+    p {
+        clear: both;
+        font-size: 0.875rem;
+    }
+}
+.advantagelist {
+    list-style: none;
+    margin: 2rem 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    grid-gap: $layout-gutter-width;
+
+    > li {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+}

@@ -1,5 +1,5 @@
-<header id="masthead" class="masthead masthead--stripe">
-</header>
+<!-- <header id="masthead" class="masthead masthead--stripe">
+</header> -->
 <header class="tnhead">
     <div class="grid-container">
         <h1 class="tntitle">Truck <em>News</em></h1>
@@ -10,6 +10,7 @@
         ?>
     </div>
 </header>
+<hr class="fulldivider">
 <div class="grid-container ps">
     <section class="spm">
         <div class="spm__main">

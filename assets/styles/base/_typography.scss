@@ -45,6 +45,10 @@ h6 {
             max-width: $layout-content * 0.666 * 1.125;
         }
     }
+
+    > img {
+        max-width: 100%;
+    }
     > p:first-child() {
         font-family: $fontsans;
         font-size: 1.125em;
@@ -196,9 +200,9 @@ label {
 }
 
 .tnhead {
-    padding-top: 1rem;
+    padding-top: 4rem;
     padding-bottom: 1rem;
-    border-bottom: 0.5rem solid $cl-primary;
+    background-color: $cl-gray-xlight;
 }
 .tntitle {
     font-weight: $fw-bold;
@@ -219,10 +223,26 @@ label {
     line-height: 1.2;
     font-weight: $fw-normal;
     text-transform: uppercase;
-    font-size: 1.75rem;
+    font-size: 1.875rem;
     display: inline-block;
-    border-bottom: 0.333rem solid $cl-primary;
-    border-top: 0.333rem solid transparent;
+    border-bottom: 0.5rem solid $cl-primary;
+    border-top: 0.5rem solid transparent;
+    margin: 0;
+    padding: 0.125em 0;
+}
+
+.accenttitle {
+    text-transform: uppercase;
+    color: $cl-primary;
+    font-size: 2rem;
+}
+
+hr.fulldivider {
     margin: 0;
     padding: 0;
+    height: 0.5rem;
+    width: 100%;
+    max-width: none;
+    background-color: $cl-primary;
+    border: none;
 }
