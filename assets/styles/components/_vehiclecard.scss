@@ -25,10 +25,25 @@
     display: flex;
     justify-content: space-between;
     height: calc(100% - 2.666rem);
+    font-size: 0.875rem;
+
+    p {
+        margin-bottom: 0.5em;
+        line-height: 1.4;
+        span + span {
+            &:before {
+                content: "/ ";
+            }
+        }
+    }
 }
 
 .vehiclecard__details__one {
     padding: $layout-gutter-width/4 $layout-gutter-width/2;
+
+    > *:last-child() {
+        margin-bottom: 0;
+    }
 }
 
 .vehiclecard__details__two {

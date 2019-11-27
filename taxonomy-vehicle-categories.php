@@ -1,6 +1,6 @@
 <header class="tnhead">
-    <div class="grid-container">
-        <h2 class="tntitle">
+    <div class="grid-container text-center">
+        <h2 class="tntitle smaller">
             <a href="<?= get_post_type_archive_link('vehicle') ?>">
                     Iznajmite <em>vozilo</em>
             </a>

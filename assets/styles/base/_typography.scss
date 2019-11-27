@@ -98,30 +98,47 @@ p.byline {
 }
 
 dl {
-    display: grid;
-    grid-template-columns: minmax(9em, 1fr) 2fr;
-    grid-column-gap: 1em;
-    grid-row-gap: 1em;
-    line-height: 1.4rem;
-    margin: $layout-gutter-width * 2 0;
+    // display: grid;
+    // grid-template-columns: minmax(9em, 1fr) 2fr;
+    // grid-column-gap: 1em;
+    // grid-row-gap: 0.5em;
+    line-height: 1.2rem;
+    margin: 0 0 1em;
+    font-size: 0.875em;
 
     @include breakpoint(tablet) {
         //font-size: 1rem;
     }
 
     dt {
-        font-weight: $fw-normal;
+        font-weight: $fw-bold;
         font-family: $fontsans;
-        text-transform: uppercase;
-        grid-column-start: 1;
         margin: 0;
-        font-size: 0.9375em;
+        display: inline-block;
+        float: left;
+
         //background-color: red;
     }
 
     dd {
-        grid-column-start: 2;
+        display: inline-block;
+        float: left;
+        span + span {
+            &:before {
+                content: "/ ";
+            }
+        }
     }
+    // dd + dt {
+    //     clear: left;
+    //     &:before {
+    //         content: "";
+    //         display: block;
+    //         height: 1em;
+    //         width: 100%;
+    //         background-color: red;
+    //     }
+    // }
 }
 
 label {
@@ -200,7 +217,7 @@ label {
 }
 
 .tnhead {
-    padding-top: 4rem;
+    padding-top: 3rem;
     padding-bottom: 1rem;
     background-color: $cl-gray-xlight;
 }
@@ -219,6 +236,10 @@ label {
     }
     a {
         color: inherit;
+    }
+
+    &.smaller {
+        font-size: 2.75rem;
     }
 }
 
@@ -248,4 +269,29 @@ hr.fulldivider {
     max-width: none;
     background-color: $cl-primary;
     border: none;
+}
+
+.twocolumn {
+    @include breakpoint($bp-tablet) {
+        column-count: 2;
+        column-gap: $layout-gutter-width * 2;
+
+        ul,
+        ol,
+        p {
+            break-inside: avoid;
+        }
+
+        // li {
+        //     break-before: avoid;
+        // }
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            break-after: avoid;
+        }
+    }
 }

@@ -2,7 +2,7 @@
 </header> -->
 <header class="tnhead">
     <div class="grid-container">
-        <h1 class="tntitle">Truck <em>News</em></h1>
+        <h2 class="tntitle"><a href="<?= get_permalink( get_option( 'page_for_posts' ) ); ?>">Truck <em>News</em></a></h2>
         <?php
             if (has_nav_menu('primary_navigation')) :
                 wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'menu menu--tntopics']);

@@ -19,7 +19,7 @@
 </div>
 <div class="ps">
     <div class="grid-container">
-    <h2 class="accenttitle"><?php _e('ZAŠTO IZNAJMLJIVANJE?','viars'); ?></h2>
+    <h2 class="accenttitle"><?php _e('Zašto iznajmljivanje?','viars'); ?></h2>
         <?php get_template_part('templates/advantages'); ?>
     </div>
 </div>
@@ -30,7 +30,9 @@
             <?php if (has_excerpt()) : ?>
             <?php the_excerpt() ?>
             <?php endif; ?>
-            <?php the_content(); ?>
+            <div class="twocolumn">
+                <?php the_content(); ?>
+            </div>
             <br><br><br>
             <img src="<?= get_stylesheet_directory_uri().'/dist/images/aboutrent.jpg'; ?>" alt="">
         </div>

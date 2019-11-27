@@ -9,7 +9,7 @@
         <?php foreach( $vcats as $vcat ) : ?>
         <li>
             <a class="vcatfilter__item" href="<?= get_term_link( $vcat )?> ">
-                <div class="drawing <?php the_field('icon'); ?>" data-grunticon-embed></div>
+                <div class="drawing <?php the_field('icon', $vcat); ?>" data-grunticon-embed></div>
                 <span><?= $vcat->name; ?></span>
             </a>
         </li>

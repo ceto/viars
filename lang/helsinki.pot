@@ -24,3 +24,7 @@ msgstr ""
 #: tmpl-contact.php:3
 msgid "Contact Template"
 msgstr ""
+
+#: tmpl-icons.php:3
+msgid "Icon Reference"
+msgstr ""

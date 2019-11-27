@@ -1,5 +1,7 @@
 <aside class="toprow">
-    lorem ipsum phone number
+    <div class="toprow__content">
+    Tel: <a href="#">+36 70 675 7889</a> | E-mail: <a href="#">info@viarent.rs</a>
+    </div>
 </aside>
 <header id="siteheader" class="siteheader">
     <a class="siteheader__brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>

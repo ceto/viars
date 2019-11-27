@@ -2,19 +2,32 @@
     position: relative;
     figure {
         position: absolute;
-        width: 3rem;
-        height: 3rem;
-        background-color: $cl-primary;
-        border-radius: 4px;
+        width: 2.75rem;
+        height: 2.75rem;
+        //background-color: $cl-primary;
+        //border-radius: 4px;
         //float: left;
-        margin: 0 0.75rem 0.25rem 0;
+        //margin: 0 0.5rem 0.125rem 0;
+
+        [class^="icon"] {
+            position: relative;
+            width: inherit;
+            height: inherit;
+            background-position: 50%;
+        }
+
+        [class^="icon"] svg {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
     }
 
     h3 {
         text-transform: uppercase;
-        font-size: 1.33325rem;
-        margin: 0 0 0.25rem 3.5rem;
-        min-height: 3rem;
+        font-size: 1.125rem;
+        margin: 0 0 0.5rem 3.25rem;
+        min-height: 2.75rem;
         vertical-align: baseline;
     }
 

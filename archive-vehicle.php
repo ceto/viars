@@ -1,6 +1,6 @@
 <header class="tnhead">
-    <div class="grid-container">
-        <h1 class="tntitle">Iznajmite <em>vozilo</em></h1>
+    <div class="grid-container text-center">
+        <h1 class="tntitle smaller">Iznajmite <em>vozilo</em></h1>
         <?php get_template_part('templates/vehiclefilter'); ?>
     </div>
 </header>

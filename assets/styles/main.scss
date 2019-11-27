@@ -80,6 +80,8 @@
 @import "layouts/ps";
 @import "layouts/spm";
 @import "layouts/box";
+@import "layouts/mobilemodal";
+@import "layouts/requestmodal";
 @import "vendor/slick.theme";
 @import "components/button";
 @import "components/siteheader";
@@ -93,3 +95,5 @@
 @import "components/catpromocard";
 @import "components/vehiclecard";
 @import "components/vcatfilter";
+
+@import "../grunticon/icons.data.svg";

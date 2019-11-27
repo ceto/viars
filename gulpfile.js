@@ -27,6 +27,16 @@ var inject = require("gulp-inject");
 
 var wpPot = require("gulp-wp-pot");
 
+var glob = require("glob");
+var gulpicon = require("gulpicon/tasks/gulpicon");
+var config = {
+    previewTemplate: "assets/iconcollection/tmpl/preview.hbs",
+    dest: "assets/grunticon",
+    enhanceSVG: true
+};
+var files = glob.sync("assets/iconcollection/*.svg");
+gulp.task("gulpicon", gulpicon(files, config));
+
 // See https://github.com/austinpray/asset-builder
 var manifest = require("asset-builder")("./assets/manifest.json");
 
@@ -114,12 +124,7 @@ var cssTasks = function(filename) {
         })
         .pipe(concat, filename)
         .pipe(autoprefixer, {
-            browsers: [
-                "last 2 versions",
-                "ie >= 9",
-                "android >= 4.4",
-                "ios >= 7"
-            ]
+            browsers: ["last 2 versions", "ie >= 9", "android >= 4.4", "ios >= 7"]
         })
         .pipe(cssNano, {
             safe: true
@@ -277,10 +282,7 @@ gulp.task("images", function() {
                 imagemin.jpegtran({ progressive: true }),
                 imagemin.gifsicle({ interlaced: true }),
                 imagemin.svgo({
-                    plugins: [
-                        { removeUnknownsAndDefaults: false },
-                        { cleanupIDs: false }
-                    ]
+                    plugins: [{ removeUnknownsAndDefaults: false }, { cleanupIDs: false }]
                 })
             ])
         )
@@ -322,6 +324,7 @@ gulp.task("watch", ["build"], function() {
     gulp.watch([path.source + "fonts/**/*"], ["fonts"]);
     gulp.watch([path.source + "images/**/*"], ["images"]);
     // gulp.watch([path.source + "iconcollection/*.svg"], ["svgicons"]);
+    // gulp.watch([path.source + "iconcollection/*.svg"], ["gulpicon"]);
     // gulp.watch(["**/*.php"], ["generatepot"]);
     gulp.watch(["bower.json", "assets/manifest.json"], ["build"]);
 });
@@ -330,12 +333,7 @@ gulp.task("watch", ["build"], function() {
 // `gulp build` - Run all the build tasks but don't clean up beforehand.
 // Generally you should be running `gulp` instead of `gulp build`.
 gulp.task("build", ["clean"], function(callback) {
-    runSequence(
-        "styles",
-        "scripts",
-        ["svgicons", "fonts", "images", "generatepot"],
-        callback
-    );
+    runSequence("gulpicon", "styles", "scripts", ["fonts", "images", "generatepot"], callback);
 });
 
 // ### Wiredep

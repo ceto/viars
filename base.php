@@ -26,10 +26,14 @@ use Roots\Sage\Wrapper;
 
     </div><!-- /.document -->
     <?php
-    do_action('get_footer');
-    get_template_part('templates/footer');
-    wp_footer();
+      do_action('get_footer');
+      get_template_part('templates/footer');
+      get_template_part('templates/mobilemodal');
     ?>
+    <?php if (is_post_type_archive('vehicle') || is_tax('vehicle-categories') || is_singular('vehicle') ) :  ?>
+        <?php get_template_part('templates/requestmodal'); ?>
+    <?php endif; ?>
+    <?php wp_footer(); ?>
 </body>
 
 </html>

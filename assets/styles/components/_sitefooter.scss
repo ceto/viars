@@ -1,9 +1,19 @@
 .sitefooter {
     background-color: $cl-dark;
+    color: $cl-gray-light;
+    font-weight: $fw-medium;
+    font-size: 0.875rem;
     position: relative;
     z-index: 1;
     padding-top: 0;
     padding-bottom: 0;
-    display: flex;
+    //display: flex;
     //justify-content: space-between;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    h3 {
+        color: $cl-gray-xlight;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+    }
 }
