@@ -10,8 +10,7 @@
         "slick-carousel": "^1.8.1",
         "photoswipe": "^4.1.3",
         "headroom.js": "https://github.com/WickyNilliams/headroom.js/files/950268/bower.zip",
-        "aos": "^2.3.4",
-        "iframe-resizer": "^4.2.8"
+        "aos": "^2.3.4"
     },
     "overrides": {
         "motion-ui": {

@@ -34,9 +34,9 @@ $(".vehiclecard").on("click", ".startrequest", function(e) {
     );
 });
 
-iFrameResize(
-    {
-        log: false
-    },
-    ".deltaiframe"
-);
+// iFrameResize(
+//     {
+//         log: false
+//     },
+//     ".deltaiframe"
+// );
