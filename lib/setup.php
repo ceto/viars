@@ -49,7 +49,7 @@ function setup() {
   add_image_size( 'medium', get_option( 'medium_size_w' ), get_option( 'medium_size_h' ), false );
   add_image_size( 'large', get_option( 'large_size_w' ), get_option( 'large_size_h' ), false );
 
-  add_image_size( 'medium43', get_option( 'medium_size_w' ), get_option( 'medium_size_w' ) * 0.75, false );
+  add_image_size( 'medium43', get_option( 'medium_size_w' ), get_option( 'medium_size_w' ) * 0.75, true );
 
   // Adding excerpt for page
   add_post_type_support( 'page', 'excerpt' );
