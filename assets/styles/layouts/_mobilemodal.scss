@@ -27,6 +27,41 @@ html.is-reveal-open body {
     }
 }
 
+.mobilemodal__head {
+    @include clearfix;
+    background-color: $cl-gray-xlight;
+    padding: 1.5rem 1rem;
+
+    figure {
+        width: 33%;
+        max-width: 50%;
+        float: right;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        background-color: $cl-primary;
+        color: #fff;
+        display: inline-block;
+        line-height: 1;
+        padding: 0.5em 0.5em;
+        font-size: 1.3335rem;
+        margin: 0 0 3rem;
+    }
+
+    p {
+        margin: 0;
+        line-height: 1.2;
+        font-size: 1.125rem !important;
+        font-weight: $fw-bold;
+    }
+
+    h3 {
+        font-size: 1.666rem;
+        //color: $cl-primary;
+        margin: 0;
+    }
+}
 .mobilemodal__inner {
     padding: calc(2rem + 4vh) 1rem 8rem;
     position: absolute;

@@ -5,28 +5,45 @@
 <article <?php post_class('vehiclecard'); ?>>
     <figure class="vehiclecard__fig">
         <a href="<?php the_permalink(); ?>">
-            <img width="768" height="480" src="https://source.unsplash.com/768x480/?truck,lorry" alt="">
+            <?php if (has_post_thumbnail() ) :?>
+            <?php the_post_thumbnail('medium43') ?>
+            <?php else: ?>
+            <img width="768" height="576" src="https://placehold.it/768x576/?text=No+Photo+Available" alt="">
+            <?php endif; ?>
+
         </a>
     </figure>
     <header>
         <h2 class="vehiclecard__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
         <section class="vehiclecard__details">
             <div class="vehiclecard__details__one">
-                <p><?php _e('Type / Superstructure', 'viars'); ?>:
+                <p class="vehiclecard__datarow tpers"><?php _e('Type / Superstructure', 'viars'); ?>:
                     <strong>
                     <?php foreach( $vcats as $vcat ) : ?>
                         <span><?= $vcat->name; ?></span>
                     <?php endforeach; ?>
                     </strong>
                 </p>
-                <p><?php _e('Capacity', 'viars'); ?>: <strong>Ipsum dolor sit.</strong></p>
-                <p><?php _e('Loading Space', 'viars'); ?>: <strong>Consectetur adipisicing.</strong></p>
-                <p><?php _e('Engine', 'viars'); ?>: <strong>Lorem.</strong></p>
-                <p>some data goes here Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <?php if ($capacity = get_field('capacity')) :?>
+                <p class="vehiclecard__datarow"><?php _e('Capacity', 'viars'); ?>: <strong><?=$capacity ?> t</strong></p>
+                <?php endif; ?>
+                <?php if ($dimension = get_field('loadingspace_dimension')) :?>
+                <p class="vehiclecard__datarow"><?php _e('Loading space dimension', 'viars'); ?>: <strong><?= $dimension ?> m</strong></p>
+                <?php endif; ?>
+                <?php if ($volume = get_field('loadingspace_volume')) :?>
+                <p class="vehiclecard__datarow"><?php _e('Loading space Volume', 'viars'); ?>: <strong><?= $volume ?> m<sup>3</m></strong></p>
+                <?php endif; ?>
+                <?php if ($engine = get_field('engine')) :?>
+                <p class="vehiclecard__datarow"><?php _e('Engine', 'viars'); ?>: <strong><?= $engine ?></strong></p>
+                <?php endif; ?>
+
+
             </div>
             <div class="vehiclecard__details__two">
-                <p>Ratione consequuntur laudantium totam.</p>
-                <a href="#" class="button" data-toggle="requestmodal"><?php _e('Request for','viars') ?></a>
+                <div>
+                <?php the_content(); ?>
+                </div>
+                <a href="#" class="button startrequest" data-toggle="requestmodal"><?php _e('zatražite ponudu','viars') ?></a>
             </div>
         </section>
     </header>

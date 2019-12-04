@@ -142,24 +142,50 @@ dl {
 }
 
 label {
-    font-family: $fontsans;
-    text-transform: uppercase;
+    // font-family: $fontsans;
+    // text-transform: uppercase;
     letter-spacing: 0.125em;
 
-    > * {
-        font-family: $fontsans !important;
-        letter-spacing: normal;
-        text-transform: none;
-    }
+    // > * {
+    //     font-family: $fontsans !important;
+    //     letter-spacing: normal;
+    //     text-transform: none;
+    // }
 
-    &.feles {
-        width: calc(50% - #{$layout-gutter-width/2});
+    // &.feles {
+    //     width: calc(50% - #{$layout-gutter-width/2});
+    //     float: left;
+
+    //     & + & {
+    //         float: right;
+    //     }
+    // }
+}
+
+label.speci {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+
+    input,
+    textarea {
+        max-width: calc(100% - 11rem);
+        margin-left: 1rem;
+    }
+    .form-error {
+        width: 100%;
+        padding-left: 11rem;
+    }
+}
+
+label.accept {
+    letter-spacing: normal;
+    line-height: 1.2;
+    font-size: 0.875rem;
+    input {
         float: left;
-
-        & + & {
-            float: right;
-        }
     }
+    margin-bottom: 1rem;
 }
 
 .bodycopy {

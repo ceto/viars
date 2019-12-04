@@ -28,11 +28,29 @@ html.is-reveal-open body {
 }
 
 .requestmodal .mobilemodal__inner {
-    padding: calc(2rem + 4vh) 1rem 8rem;
+    padding: calc(2rem + 4vh) 1rem;
     position: static;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
     overflow: scroll;
+}
+
+.requestmodal__close {
+    font-weight: $fw-light;
+    margin-top: 1rem;
+    font-size: 2.25rem;
+    color: $cl-gray;
+    border: 1px solid $cl-gray-xlight;
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    line-height: 0;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    //transform: translateX(-50%);
+    background-color: rgba(#fff, 0.75);
+    box-shadow: 0 0 0.875rem 0 rgba(#000, 0.25);
 }

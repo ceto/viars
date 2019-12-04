@@ -8,6 +8,49 @@
         <?php get_template_part('templates/vehiclefilter'); ?>
     </div>
 </header>
+
+    <?php $currentcat= get_term(get_queried_object()->term_id); ?>
+    <?php //echo $currentcat->parent.' '; _e('results','helsinki') ?>
+
+    <?php
+        if ($currentcat->parent!==0) {
+            $childcats = get_terms( array(
+                'taxonomy' => 'vehicle-categories',
+                'hide_empty' => false,
+                'parent'   => $currentcat->parent
+                ) );
+        } else {
+
+            $childcats = get_terms( array(
+            'taxonomy' => 'vehicle-categories',
+            'hide_empty' => false,
+            'parent'   => get_queried_object()->term_id
+            ) );
+        }
+    ?>
+
+    <?php if ( ! empty( $childcats ) && ! is_wp_error( $childcats ) ): ?>
+        <div class="ps ps--dark ps--xnarrow">
+
+            <div class="grid-container">
+                <ul class="menu menu--tntopics">
+                    <li><a href="#"><strong>Filter by superstructure:</strong></a></li>
+                    <?php foreach ( $childcats as $term ) : ?>
+                        <?php if ($currentcat == $term) : ?>
+                        <li class="active">
+                        <?php else: ?>
+                        <li>
+                        <?php endif; ?>
+                        <a href="<?= get_term_link($term) ?>"><?= $term->name ?></a>
+                    </li>
+                    <?php endforeach ?>
+                    </ul>
+                    </div>
+            </div>
+    <?php endif; ?>
+
+
+
 <!-- <hr class="fulldivider"> -->
 <div class="grid-container ps">
     <?php if (!have_posts()) : ?>

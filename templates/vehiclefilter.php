@@ -3,6 +3,13 @@
     $vcats = get_terms( array(
         'taxonomy' => 'vehicle-categories',
         'hide_empty' => false,
+        'meta_query' => array(
+            array(
+                'key'       => 'showinfilter',
+                'value'     => '1',
+                'compare'   => '='
+            )
+        )
     ));
     ?>
     <ul class="vcatfilter">

@@ -28,3 +28,7 @@ msgstr ""
 #: tmpl-icons.php:3
 msgid "Icon Reference"
 msgstr ""
+
+#: tmpl-iframe.php:3
+msgid "Iframe template"
+msgstr ""

@@ -28,6 +28,16 @@
     padding-bottom: 1.5rem;
 }
 
+.ps--xnarrow {
+    @include breakpoint(large) {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
 .ps--wide {
     @include breakpoint(large) {
         padding-top: 12vh;

@@ -25,7 +25,7 @@
     display: flex;
     justify-content: space-between;
     height: calc(100% - 2.666rem);
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
 
     p {
         margin-bottom: 0.5em;
@@ -52,8 +52,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 20em;
+    flex-grow: 2;
     .button {
         margin: 0 #{0-$layout-gutter-width/2} #{0-$layout-gutter-width/4} 0;
+        //white-space: nowrap;
     }
 }
 
@@ -72,6 +75,20 @@
     }
 }
 
+.vehiclecard__datarow {
+    strong {
+        white-space: nowrap;
+    }
+
+    &.tpers {
+        strong {
+            white-space: normal;
+            span {
+                white-space: nowrap;
+            }
+        }
+    }
+}
 .vehiclelist {
     list-style: none;
     margin: 0 0;

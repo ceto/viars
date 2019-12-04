@@ -33,7 +33,10 @@
     }
 
     &.large {
-        font-size: 1rem;
+        font-size: 1.25rem;
+    }
+    &.expanded {
+        width: 100%;
     }
 
     .bodycopy & {
