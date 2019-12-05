@@ -37,7 +37,7 @@ function viars_custom_post_type() {
 		'description'           => __( 'Post Type for Rentable Vehicles', 'viars' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail', 'page-attributes', 'custom-fields', 'excerpt' ),
-		'taxonomies'            => array( 'vehiclecat' ),
+		'taxonomies'            => array( 'vehicle-categories', 'vehicle-attributes' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -76,6 +76,7 @@ function viars_add_vehicle_taxonomies(){
             array("hierarchical" => true,
                     'labels' => $category_labels,
                     'show_ui' => true,
+                    'show_admin_column' => true,
                     'query_var' => true,
                     'rewrite' => array( 'slug' => 'vehicles' )
     ));
@@ -98,6 +99,7 @@ function viars_add_vehicle_taxonomies(){
         array('hierarchical' => false,
         'labels' => $attributes_labels,
         'show_ui' => true,
+        'show_admin_column' => true,
         'query_var' => true,
         'rewrite' => array( 'slug' => 'vehicle-attributes' )
     ));
@@ -163,7 +165,3 @@ function viars_member_custom_post_type() {
 
 }
 add_action( 'init', 'viars_member_custom_post_type', 0 );
-
-
-
-

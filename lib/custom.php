@@ -62,3 +62,12 @@ function viars_remove_block_css() {
 
 
 
+function viars_modify_num_vehicles($query) {
+    if ( ($query->is_main_query()) && ($query->is_archive('vehicle') || $query->is_tax('vehicle-categories') || $query->is_tax('vehicle-attributes') ) && (!is_admin()) ) {
+        $query->set('posts_per_page', -1);
+        $query->set('orderby', 'menu_order');
+        $query->set('order', 'ASC');
+        $query->set('post_status', array('publish' ));
+    }
+}
+add_action('pre_get_posts', 'viars_modify_num_vehicles');
