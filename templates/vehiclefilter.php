@@ -1,3 +1,4 @@
+<div class="ps--light">
 <div class="grid-container has-overflowelement">
     <?php
     $vcats = get_terms( array(
@@ -8,8 +9,8 @@
                 'key'       => 'showinfilter',
                 'value'     => '1',
                 'compare'   => '='
-            )
-        )
+            ),
+        ),
     ));
     ?>
     <ul class="vcatfilter">
@@ -22,4 +23,5 @@
         </li>
         <?php endforeach; ?>
     </ul>
+</div>
 </div>

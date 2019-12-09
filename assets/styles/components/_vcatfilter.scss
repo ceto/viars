@@ -1,7 +1,7 @@
 .vcatfilter {
     list-style: none;
     margin: 0;
-    padding: 2rem 0 4rem;
+    padding: 2rem 0 5rem;
     display: grid;
     display: flex;
     flex-wrap: nowrap;
@@ -89,5 +89,16 @@
         .is-active & {
             color: $cl-primary;
         }
+    }
+}
+
+.vcathero {
+    height: 33vw;
+    max-height: 20rem;
+    img {
+        display: block;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
     }
 }

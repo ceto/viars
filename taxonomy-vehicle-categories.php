@@ -1,16 +1,16 @@
-<header class="tnhead">
-    <div class="grid-container text-center">
-        <h2 class="tntitle smaller">
-            <a href="<?= get_post_type_archive_link('vehicle') ?>">
-                    Iznajmite <em>vozilo</em>
-            </a>
-        </h2>
-        <?php get_template_part('templates/vehiclefilter'); ?>
-    </div>
-</header>
+<?php $currentcat = get_term(get_queried_object()->term_id); ?>
 
-    <?php $currentcat= get_term(get_queried_object()->term_id); ?>
-    <?php //echo $currentcat->parent.' '; _e('results','helsinki') ?>
+<?php if ($cathero = get_field('heroimage', $currentcat)) : ?>
+    <figure class="vcathero">
+        <?= wp_get_attachment_image($cathero[ID], 'banner', false); ?>
+    </figure>
+<?php else: ?>
+    <figure class="vcathero">
+        <img src="<?= get_stylesheet_directory_uri(); ?>/dist/images/hero-road.jpg" alt="">
+    </figure>
+<?php endif; ?>
+<?php get_template_part('templates/vehiclefilter'); ?>
+
 
     <?php
         if ($currentcat->parent!==0) {
@@ -28,9 +28,8 @@
             ) );
         }
     ?>
-
     <?php if ( ! empty( $childcats ) && ! is_wp_error( $childcats ) ): ?>
-        <div class="ps ps--dark ps--xnarrow">
+        <!-- <div class="ps ps--dark ps--xnarrow">
 
             <div class="grid-container">
                 <ul class="menu menu--tntopics">
@@ -44,9 +43,9 @@
                         <a href="<?= get_term_link($term) ?>"><?= $term->name ?></a>
                     </li>
                     <?php endforeach ?>
-                    </ul>
-                    </div>
+                </ul>
             </div>
+        </div> -->
     <?php endif; ?>
 
 
