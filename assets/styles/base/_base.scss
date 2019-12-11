@@ -9,9 +9,9 @@ html {
         font-size: $font-globalsize;
     }
 
-    @include breakpoint($bp-xxxlarge) {
-        font-size: $font-globalsize * 1.125;
-    }
+    // @include breakpoint($bp-xxxlarge) {
+    //     font-size: $font-globalsize * 1.125;
+    // }
 }
 
 body {

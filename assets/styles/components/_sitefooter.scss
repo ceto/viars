@@ -17,3 +17,35 @@
         text-transform: uppercase;
     }
 }
+
+.sitefooter__contact {
+    padding: 2rem 0 1rem;
+    @include breakpoint($bp-medium) {
+        width: 50%;
+        float: left;
+    }
+}
+
+.sitefooter__logos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem 0 1rem;
+
+    img {
+        width: 30%;
+        max-width: 7rem;
+        &:not(:last-child()) {
+            margin-right: 5%;
+        }
+        @include breakpoint($bp-medium) {
+            justify-content: flex-start;
+        }
+    }
+
+    @include breakpoint($bp-medium) {
+        width: 50%;
+        float: right;
+        justify-content: flex-end;
+    }
+}

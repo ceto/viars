@@ -29,6 +29,9 @@ function setup() {
   register_nav_menus([
     'primary_navigation' => __('Primary Navigation', 'viars')
   ]);
+  register_nav_menus([
+    'footermini_navigation' => __('Footer Mini Navigation', 'viars')
+  ]);
 
  // Enable post thumbnails
   // http://codex.wordpress.org/Post_Thumbnails

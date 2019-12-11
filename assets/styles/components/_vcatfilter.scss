@@ -35,10 +35,12 @@
 
 .vcatfilter__item {
     display: block;
+    width: 9rem;
     //position: relative;
     //width: 100%;
     //background-color: red;
     color: $cl-body-font-color;
+    padding: 0 1rem;
 
     &:hover,
     &:focus {
@@ -54,8 +56,9 @@
     }
 
     .drawing {
-        width: 9rem;
-        height: 3.5rem;
+        width: 100%;
+        // max-width: 8rem;
+        height: 2.75rem;
         background-position: center bottom;
 
         svg {
@@ -69,18 +72,19 @@
         //opacity: 0;
         position: absolute;
         top: 100%;
-        width: 120%;
+        width: 100%;
         left: 50%;
         transform: translateX(-50%);
         display: block;
         margin: 10% auto 0;
-        font-size: 0.875rem;
+        font-size: 0.75rem;
         font-weight: $fw-bold;
         text-transform: uppercase;
         line-height: 1.4;
         text-transform: uppercase;
         //letter-spacing: 0.125em;
         color: inherit;
+        padding: 0 1rem;
 
         @include breakpoint(tablet) {
             //font-size: 0.666rem;
@@ -94,7 +98,7 @@
 
 .vcathero {
     height: 33vw;
-    max-height: 20rem;
+    max-height: 17.5rem;
     img {
         display: block;
         object-fit: cover;
