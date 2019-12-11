@@ -23,8 +23,8 @@
         </div>
         <nav class="sitefooter__mininav">
             <?php
-                    if (has_nav_menu('primary_navigation')) :
-                        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'menu menu--footermini']);
+                    if (has_nav_menu('footermini_navigation')) :
+                        wp_nav_menu(['theme_location' => 'footermini_navigation', 'menu_class' => 'menu menu--footermini']);
                     endif;
                     ?>
         </nav>
