@@ -11,16 +11,16 @@ $slick-font-path: "./fonts/";
 $slick-font-family: $fontsans;
 $slick-loader-path: "../images/";
 $slick-arrow-color: $cl-body-font-color;
-$slick-dot-color: $cl-body-font-color;
-$slick-dot-color-active: $slick-dot-color;
+$slick-dot-color: #fff;
+$slick-dot-color-active: $cl-primary;
 $slick-prev-character: "\2329";
 $slick-next-character: "\232A";
 //$slick-dot-character: "\25A0";
-$slick-dot-character: "|";
-$slick-dot-size: 0.5rem;
-$slick-opacity-default: 0.5;
+$slick-dot-character: "\2022";
+$slick-dot-size: 3rem;
+$slick-opacity-default: 1;
 $slick-opacity-on-hover: 1;
-$slick-opacity-not-active: 0.25;
+$slick-opacity-not-active: 1;
 
 @function slick-image-url($url) {
     @if function-exists(image-url) {
@@ -34,8 +34,7 @@ $slick-opacity-not-active: 0.25;
 
 .slick-list {
     .slick-loading & {
-        background: #fff slick-image-url("ajax-loader.gif") center center
-            no-repeat;
+        background: #fff slick-image-url("ajax-loader.gif") center center no-repeat;
     }
 }
 
@@ -124,20 +123,23 @@ $slick-opacity-not-active: 0.25;
 /* Dots */
 
 .slick-dotted.slick-slider {
-    margin-bottom: $layout-gutter-width * 3;
+    //margin-bottom: $layout-gutter-width * 3;
 }
 
 .slick-dots {
+    @extend .grid-container;
     position: absolute;
-    bottom: -2.5rem;
+    bottom: 0;
     list-style: none;
     display: block;
     //text-align: center;
-    padding: 0;
-    margin: 0;
+    //padding: 0;
+    margin: 0 auto;
     width: 100%;
     color: $slick-dot-color;
-
+    //background-color: blue;
+    left: 50%;
+    transform: translateX(-50%);
     li {
         position: relative;
         display: inline-block;
@@ -170,7 +172,7 @@ $slick-opacity-not-active: 0.25;
             }
 
             &::before {
-                transform: skewX(-15deg);
+                // transform: skewX(-15deg);
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -183,6 +185,7 @@ $slick-opacity-not-active: 0.25;
                 line-height: 1;
                 text-align: center;
                 //color: inherit;
+                text-shadow: 0 0 1px $cl-primary;
                 opacity: $slick-opacity-not-active;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
@@ -190,9 +193,9 @@ $slick-opacity-not-active: 0.25;
         }
 
         &.slick-active button::before {
-            //color: $slick-dot-color-active;
+            color: $slick-dot-color-active;
             opacity: $slick-opacity-default;
-            transform: skewX(-15deg) scaleY(1.333);
+            // transform: skewX(-15deg) scaleY(1.333);
         }
     }
 }

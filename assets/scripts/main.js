@@ -34,6 +34,28 @@ $(".vehiclecard").on("click", ".startrequest", function(e) {
     );
 });
 
+$(".homecarousel").slick({
+    mobileFirst: true,
+    infinite: true,
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    adaptiveHeight: true,
+    responsive: [
+        {
+            breakpoint: 1280,
+            settings: {
+                dots: true,
+                arrows: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                adaptiveHeight: true
+            }
+        }
+    ]
+});
+
 // iFrameResize(
 //     {
 //         log: false

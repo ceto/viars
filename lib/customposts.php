@@ -52,7 +52,59 @@ function viars_custom_post_type() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'vehicle', $args );
+    register_post_type( 'vehicle', $args );
+
+
+    $labels = array(
+		'name'                  => _x( 'Slides', 'Post Type General Name', 'viars' ),
+		'singular_name'         => _x( 'Slide', 'Post Type Singular Name', 'viars' ),
+		'menu_name'             => __( 'Home Slides', 'viars' ),
+		'name_admin_bar'        => __( 'Slide', 'viars' ),
+		'archives'              => __( 'Item Archives', 'viars' ),
+		'attributes'            => __( 'Item Attributes', 'viars' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'viars' ),
+		'all_items'             => __( 'All Slides', 'viars' ),
+		'add_new_item'          => __( 'Add New Item', 'viars' ),
+		'add_new'               => __( 'Add New', 'viars' ),
+		'new_item'              => __( 'New Item', 'viars' ),
+		'edit_item'             => __( 'Edit Item', 'viars' ),
+		'update_item'           => __( 'Update Item', 'viars' ),
+		'view_item'             => __( 'View Slide', 'viars' ),
+		'view_items'            => __( 'View Slides', 'viars' ),
+		'search_items'          => __( 'Search Slide', 'viars' ),
+		'not_found'             => __( 'Not found', 'viars' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'viars' ),
+		'featured_image'        => __( 'Featured Image', 'viars' ),
+		'set_featured_image'    => __( 'Set featured image', 'viars' ),
+		'remove_featured_image' => __( 'Remove featured image', 'viars' ),
+		'use_featured_image'    => __( 'Use as featured image', 'viars' ),
+		'insert_into_item'      => __( 'Insert into item', 'viars' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'viars' ),
+		'items_list'            => __( 'Items list', 'viars' ),
+		'items_list_navigation' => __( 'Items list navigation', 'viars' ),
+		'filter_items_list'     => __( 'Filter items list', 'viars' ),
+	);
+	$args = array(
+		'label'                 => __( 'Slide', 'viars' ),
+		'description'           => __( 'Post Type for Home Slides', 'viars' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'thumbnail', 'page-attributes', 'custom-fields', 'excerpt' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+        'menu_position'         => 21,
+        'menu_icon'             => 'dashicons-media-interactive',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'slide', $args );
+
 
 }
 add_action( 'init', 'viars_custom_post_type', 0 );

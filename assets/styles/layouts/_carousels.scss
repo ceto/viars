@@ -1,0 +1,37 @@
+.homecarousel {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    //box-shadow: 0 0.125rem 0.25rem -0.125rem rgba(#000, 0.5);
+    background-color: $cl-gray-xlight;
+    //line-height: 0;
+
+    // li {
+    //     margin: 0;
+    //     padding: 0;
+    //     display: block;
+    // }
+
+    .slick-prev {
+        left: 8.5%;
+    }
+
+    .slick-next {
+        right: 8.5%;
+    }
+    .slick-dots {
+        //color: #fff;
+    }
+
+    .slick-prev,
+    .slick-next {
+        //color: $cl-primary;
+    }
+
+    figure {
+        // .thumbnail {
+        //     display: block;
+        // }
+        //box-shadow: 0 0.125rem 0.25rem -0.125rem rgba(#000, 0.5);
+    }
+}

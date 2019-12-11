@@ -5,12 +5,22 @@
         'taxonomy' => 'vehicle-categories',
         'hide_empty' => false,
         'meta_query' => array(
-            array(
-                'key'       => 'showinfilter',
-                'value'     => '1',
-                'compare'   => '='
+            'position_clause' => array(
+                'key' => 'order',
+                'value' => 0,
+                'compare' => '>='
             ),
+            'filter_clause' => array(
+                array(
+                    'key'       => 'showinfilter',
+                    'value'     => '1',
+                    'compare'   => '='
+                ),
+            ),
+            'relation' => 'OR',
         ),
+        'orderby' => 'position_clause',
+        'order' =>  'DESC',
     ));
     ?>
     <ul class="vcatfilter">
