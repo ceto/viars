@@ -26,7 +26,8 @@ if($_POST) {
   $user_Name = filter_var($_POST["userName"], FILTER_SANITIZE_STRING);
   $user_Email = filter_var($_POST["userEmail"], FILTER_SANITIZE_EMAIL);
   $user_Tel = filter_var($_POST["userTel"], FILTER_SANITIZE_STRING);
-//   $user_Service = filter_var($_POST["userService"], FILTER_SANITIZE_STRING);
+  $user_Company = filter_var($_POST["userCompany"], FILTER_SANITIZE_EMAIL);
+  $user_Address = filter_var($_POST["userAddress"], FILTER_SANITIZE_STRING);
   $user_Message = filter_var($_POST["userMsg"], FILTER_SANITIZE_STRING);
 
   $user_Message = str_replace("\&#39;", "'", $user_Message);
@@ -51,7 +52,7 @@ if($_POST) {
   'BCC: '.$dev_Email.'' . "\r\n" .
   'X-Mailer: PHP/' . phpversion();
 
-  $sentMail = @wp_mail($to_Email, $subject, 'Név: '.$user_Name. "\r\n". 'E-mail: '.$user_Email. "\r\n" .'Telefon: '.$user_Tel . "\r\n". "\r\n\n"  .' '.$user_Message, $headers);
+  $sentMail = @wp_mail($to_Email, $subject, 'Név: '.$user_Name. "\r\n". 'E-mail: '.$user_Email. "\r\n" .'Telefon: '.$user_Tel . "\r\n". 'Company: '.$user_Company. "\r\n" .'Address: '.$user_Address . "\r\n". "\r\n\n"  .' '.$user_Message, $headers);
 
   if(!$sentMail) {
     $output = json_encode(array('type'=>'error', 'text' => __('Üzenet küldése nem sikerült. Vegye fel velünk a kapcsolatot e-mailben vagy telefonon!','cadcam')));

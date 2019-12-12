@@ -33,7 +33,7 @@
                     </div>
                     <div class="cell small-12">
                         <label class="speci">E-mail*
-                            <input id="r_email" id="r_email" type="email" required>
+                            <input id="r_email" name="r_email" type="email" required>
                             <span class="form-error">
                                 I'm required!
                             </span>
@@ -41,7 +41,7 @@
                     </div>
                     <div class="cell small-12">
                         <label class="speci">Telefon*
-                            <input id="r_tel" id="r_tel" type="text" required>
+                            <input id="r_tel" name="r_tel" type="text" required>
                             <span class="form-error">
                                 I'm required!
                             </span>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="cell small-12">
                         <label class="speci">Naziv kompanije*
-                            <input id="r_company" id="r_company" type="text" arequired>
+                            <input id="r_company" name="r_company" type="text" required>
                             <span class="form-error">
                                 I'm required!
                             </span>
@@ -57,7 +57,7 @@
                     </div>
                     <div class="cell small-12">
                         <label class="speci">Adresa*
-                            <input id="r_address" id="r_address" type="text" arequired>
+                            <input id="r_address" name="r_address" type="text" required>
                             <span class="form-error">
                                 I'm required!
                             </span>
@@ -65,14 +65,14 @@
                     </div>
                     <fieldset class="cell small-12">
                         <legend>Period iznajmljivanja</legend>
-                        <label class="aaaccept" for="r_timeShort"><input type="radio" name="r_time" value="Short"
+                        <label for="r_timeShort"><input type="radio" name="r_time" value="Short"
                                 id="r_timeShort">Kratkoročno iznajmljivanje (1-364 dana)</label>
-                        <label class="aaaccept" for="r_timeLong"><input type="radio" name="r_time" value="Long"
+                        <label for="r_timeLong"><input type="radio" name="r_time" value="Long"
                                 id="r_timeLong" required>Dugoročno iznajmljivanje (duže od godinu dana)</label>
                     </fieldset>
                     <div class="cell small-12">
                         <label>Poruka
-                            <textarea id="r_message" id="r_message" rows="4"></textarea>
+                            <textarea id="r_message" name="r_message" rows="4"></textarea>
                         </label>
                     </div>
                     <div class="cell small-12">

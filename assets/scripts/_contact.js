@@ -2,12 +2,14 @@
 $("#contact_form").on("submit", function(ev, frm) {
     ev.preventDefault();
 
-    //alert("elcsipve");
+    // alert("elcsipve");
 
     //get input field values
     var user_name = $("input[name=r_name]").val();
     var user_email = $("input[name=r_email]").val();
     var user_tel = $("input[name=r_tel]").val();
+    var user_company = $("input[name=r_company]").val();
+    var user_address = $("input[name=r_address]").val();
     var user_msg = $("textarea[name=r_message]").val();
     // var user_service = $("select[name=r_service]").val();
 
@@ -35,7 +37,8 @@ $("#contact_form").on("submit", function(ev, frm) {
             userName: user_name,
             userEmail: user_email,
             userTel: user_tel,
-            // userService: user_service,
+            userCompany: user_company,
+            userAddress: user_address,
             userMsg: user_msg
         };
         $("#contact_submit").addClass("disabled");
@@ -52,6 +55,7 @@ $("#contact_form").on("submit", function(ev, frm) {
                 //load json data from server and output message
                 if (response.type === "error") {
                     output = '<p class="form-error">' + response.text + "</p>";
+                    console.log(response.text);
                 } else {
                     output = '<p class="form-helper">' + response.text + "</p>";
 
@@ -75,6 +79,7 @@ $("#contact_form").on("submit", function(ev, frm) {
                     .slideDown();
                 $("#contact_submit").removeClass("disabled");
                 $("#contact_submit").removeAttr("disabled");
+
                 // $("#contact_submit").text("Küldés");
             },
             "json"
@@ -85,13 +90,13 @@ $("#contact_form").on("submit", function(ev, frm) {
 });
 
 //reset previously set border colors and hide all message on .keyup()
-$("#contact_form input, #contact_form textarea, #contact_form #acceptgdpr").keyup(function() {
+$("#contact_form input, #contact_form textarea, #contact_form #r_acceptgdpr").keyup(function() {
     //$("#contact_form input, #contact_form textarea").css('border-color', '');
     $("#result").slideUp();
     $("#formerror").slideUp();
 });
 
-$("#contact_form #acceptgdpr").on("change", function() {
+$("#contact_form #r_acceptgdpr").on("change", function() {
     $("#result").slideUp();
     $("#formerror").slideUp();
 });
