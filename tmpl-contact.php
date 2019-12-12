@@ -31,14 +31,14 @@
                 </div>
         </div>
         <aside class="spm__side sidebar">
-            <figure>
+            <!-- <figure>
                 <img src="https://source.unsplash.com/800x600/?truck,lorry" alt="">
-            </figure>
+            </figure> -->
         </aside><!-- /.sidebar -->
     </div>
-    <br>
+    <!-- <br>
     <hr aclass="fulldivider">
     <br>
-    <img src="https://placehold.it/1600x600/?text=Google+maps+goes+here" alt="">
+    <img src="https://placehold.it/1600x600/?text=Google+maps+goes+here" alt=""> -->
 </div>
 <?php endwhile; ?>

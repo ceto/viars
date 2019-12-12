@@ -75,7 +75,7 @@ $("#contact_form").on("submit", function(ev, frm) {
                     .slideDown();
                 $("#contact_submit").removeClass("disabled");
                 $("#contact_submit").removeAttr("disabled");
-                $("#contact_submit").text("Küldés");
+                // $("#contact_submit").text("Küldés");
             },
             "json"
         );
@@ -85,13 +85,13 @@ $("#contact_form").on("submit", function(ev, frm) {
 });
 
 //reset previously set border colors and hide all message on .keyup()
-$("#contact_form input, #contact_form textarea, #contact_form #accept").keyup(function() {
+$("#contact_form input, #contact_form textarea, #contact_form #acceptgdpr").keyup(function() {
     //$("#contact_form input, #contact_form textarea").css('border-color', '');
     $("#result").slideUp();
     $("#formerror").slideUp();
 });
 
-$("#contact_form #accept").on("change", function() {
+$("#contact_form #acceptgdpr").on("change", function() {
     $("#result").slideUp();
     $("#formerror").slideUp();
 });

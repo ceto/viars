@@ -76,7 +76,7 @@
                         </label>
                     </div>
                     <div class="cell small-12">
-                        <label class="accept" for="r_acceptgdpr"><input id="r_acceptgdpr" type="checkbox"
+                        <label class="accept" for="r_acceptgdpr"><input id="r_acceptgdpr" name="r_acceptgdpr" type="checkbox"
                                 required>Popunjavanjem i slanjem obrasca za davanje ponude prihvatam navode iz <a
                                 href="<?= get_privacy_policy_url(); ?>">informacije o rukovanju podacima.</a></label>
                     </div>
@@ -86,8 +86,15 @@
             <div class="grid-container">
                 <div class="grid-x grid-margin-x">
                     <fieldset class="cell small-12">
-                        <button id="contact_submit" type="submit"
-                            class="button large"><?php _e('Submit','viars'); ?></button>
+                        <div class="formactions text-center">
+                            <div id="result"></div>
+                            <input type="hidden" name="ap_id" value="<?php echo $subjecto; ?>">
+                            <input type="hidden" name="message_page" value="<?php the_title(); ?>">
+                            <input type="hidden" name="message_human" value="2">
+                            <input type="hidden" name="submitted" value="1">
+                            <button id="contact_submit" type="submit"
+                                class="button large"><?php _e('Submit','viars'); ?></button>
+                        </div>
                     </fieldset>
                 </div>
             </div>
