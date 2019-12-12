@@ -1,6 +1,6 @@
 <aside class="toprow">
     <div class="toprow__content">
-    Tel: <a href="#">+36 70 675 7889</a> | E-mail: <a href="#">info@viarent.rs</a>
+        Centrala: <a href="#">-</a> | E-mail: <a href="mailto:offcie@viarent.rs">office@viarent.rs</a>
     </div>
 </aside>
 <header id="siteheader" class="siteheader">

@@ -8,10 +8,10 @@
                     ?>
         </nav>
         <div class="sitefooter__contact">
-            <h3>Viarent Serbia</h3>
-            <p>SR-2310 Szigetszentmiklós,<br>
-            Leshegy Ipari Park, Leshegy utca 13.</p>
-            <p>Tel.: +36 24 50 22 50<br>Fax: +36 24 50 22 33<br>Email: marketing@delta-truck.hu</p>
+            <h3>Viarent Srbija</h3>
+            <p>Sretenjska 4, 11272, Dobanovci,<br>
+                Beograd, Srbija</p>
+            <p>Centrala:<br>Email: <a href="mailto:offcie@viarent.rs">office@viarent.rs</a></p>
         </div>
         <div class="sitefooter__logos">
             <img src="<?= get_stylesheet_directory_uri(); ?>/dist/images/deltalogo.svg" alt="">
@@ -19,7 +19,8 @@
         </div>
         <hr>
         <div class="sitefooter__copyright">
-            <small>© 2019 Delta-Truck Kft. • VIARENT, a Via Bérautó Kft. védjegye • Delta-Truck s.r.o. All Rights</small>
+            <small>© 2019 Delta-Truck Kft. • VIARENT, a Via Bérautó Kft. védjegye • Delta-Truck s.r.o. All
+                Rights</small>
         </div>
         <nav class="sitefooter__mininav">
             <?php
