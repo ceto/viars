@@ -19,6 +19,12 @@ $(".vehiclecard").on("click", ".startrequest", function(e) {
             .find(".vehiclecard__title")
             .text()
     );
+    $("#requestmodal #r_vehicle").val(
+        $(this)
+            .closest(".vehiclecard")
+            .find(".vehiclecard__title")
+            .text()
+    );
     $("#requestmodal .mobilemodal__head p").html(
         $(this)
             .closest(".vehiclecard")

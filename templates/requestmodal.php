@@ -67,8 +67,8 @@
                         <legend>Period iznajmljivanja</legend>
                         <label for="r_timeShort"><input type="radio" name="r_time" value="Short"
                                 id="r_timeShort">Kratkoročno iznajmljivanje (1-364 dana)</label>
-                        <label for="r_timeLong"><input type="radio" name="r_time" value="Long"
-                                id="r_timeLong" required>Dugoročno iznajmljivanje (duže od godinu dana)</label>
+                        <label for="r_timeLong"><input type="radio" name="r_time" value="Long" id="r_timeLong"
+                                required>Dugoročno iznajmljivanje (duže od godinu dana)</label>
                     </fieldset>
                     <div class="cell small-12">
                         <label>Poruka
@@ -76,9 +76,10 @@
                         </label>
                     </div>
                     <div class="cell small-12">
-                        <label class="accept" for="r_acceptgdpr"><input id="r_acceptgdpr" name="r_acceptgdpr" type="checkbox"
-                                required>Popunjavanjem i slanjem obrasca za davanje ponude prihvatam navode iz <a
-                                href="<?= get_privacy_policy_url(); ?>">informacije o rukovanju podacima.</a></label>
+                        <label class="accept" for="r_acceptgdpr"><input id="r_acceptgdpr" name="r_acceptgdpr"
+                                type="checkbox" required>Popunjavanjem i slanjem obrasca za davanje ponude prihvatam
+                            navode iz <a href="<?= get_privacy_policy_url(); ?>">informacije o rukovanju
+                                podacima.</a></label>
                     </div>
                 </div>
             </div>
@@ -89,11 +90,11 @@
                         <div class="formactions text-center">
                             <div id="result"></div>
                             <input type="hidden" name="ap_id" value="<?php echo $subjecto; ?>">
-                            <input type="hidden" name="message_page" value="<?php the_title(); ?>">
+                            <input type="hidden" id="r_vehicle" name="r_vehicle" value="">
                             <input type="hidden" name="message_human" value="2">
                             <input type="hidden" name="submitted" value="1">
                             <button id="contact_submit" type="submit"
-                                class="button large"><?php _e('Submit','viars'); ?></button>
+                                class="button large"><?php _e('Pošaljite','viars'); ?></button>
                         </div>
                     </fieldset>
                 </div>

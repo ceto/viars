@@ -1,41 +1,60 @@
 .vcatfilter {
+    position: relative;
     list-style: none;
     margin: 0;
     padding: 2rem 0 5rem;
     display: grid;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: center;
     //grid-row-gap: 50px;
-    min-width: 50rem;
+    min-width: 60rem;
     align-items: center;
     justify-items: center;
     text-align: center;
 
     > li {
         position: relative;
-        // @include breakpoint($bp-xlarge) {
-        //     &:not(:last-child) {
-        //         &:after {
-        //             position: absolute;
-        //             right: -35%;
-        //             top: 0;
-        //             content: "";
-        //             display: block;
-        //             height: 5.25rem;
-        //             width: 1px;
-        //             //transform: translateY(-50%);
-        //             border-right: 1px solid $cl-primary;
-        //             position: absolute;
-        //         }
-        //     }
-        // }
+        width: 14.28%;
+        &:not(:last-child) {
+            &:before {
+                pointer-events: none;
+                content: "";
+                //z-index: 0;
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 200%;
+                background-image: linear-gradient(
+                    -90deg,
+                    $cl-primary 1px,
+                    transparent 1px,
+                    transparent 100%
+                );
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+        }
+    }
+
+    &.has-5-item > li {
+        width: 20%;
+    }
+    &.has-6-item > li {
+        width: 16.666%;
+    }
+    &.has-7-item > li {
+        width: 14.28%;
     }
 }
 
 .vcatfilter__item {
     display: block;
     width: 9rem;
+    margin: 0 auto;
     //position: relative;
     //width: 100%;
     //background-color: red;

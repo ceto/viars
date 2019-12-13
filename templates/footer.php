@@ -8,19 +8,19 @@
                     ?>
         </nav>
         <div class="sitefooter__contact">
-            <h3>Viarent Srbija</h3>
+            <h3>SDT GROUP D.O.O.</h3>
             <p>Sretenjska 4, 11272, Dobanovci,<br>
                 Beograd, Srbija</p>
             <p>Centrala:<br>Email: <a href="mailto:offcie@viarent.rs">office@viarent.rs</a></p>
+            <p>VIARENT trademark may be used in Serbia by SDT GROUP D.O.O.</p>
         </div>
         <div class="sitefooter__logos">
-            <img src="<?= get_stylesheet_directory_uri(); ?>/dist/images/deltalogo.svg" alt="">
+            <img src="<?= get_stylesheet_directory_uri(); ?>/dist/images/sdt.png" alt="">
             <img src="<?= get_stylesheet_directory_uri(); ?>/dist/images/logo-white.svg" alt="">
         </div>
         <hr>
         <div class="sitefooter__copyright">
-            <small>© 2019 Delta-Truck Kft. • VIARENT, a Via Bérautó Kft. védjegye • Delta-Truck s.r.o. All
-                Rights</small>
+            <small>&copy; 2019 VIARENT is a trademark of Via Bérautó Kft. All rights reserved</small>
         </div>
         <nav class="sitefooter__mininav">
             <?php

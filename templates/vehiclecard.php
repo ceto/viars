@@ -1,4 +1,3 @@
-
 <?php
     $vcats= get_the_terms(get_the_ID(),'vehicle-categories');
 ?>
@@ -17,33 +16,38 @@
         <h2 class="vehiclecard__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
         <section class="vehiclecard__details">
             <div class="vehiclecard__details__one">
-                <p class="vehiclecard__datarow tpers"><?php _e('Type / Superstructure', 'viars'); ?>:
+                <p class="vehiclecard__datarow tpers"><?php _e('Nadgradnja', 'viars'); ?>:
                     <strong>
-                    <?php foreach( $vcats as $vcat ) : ?>
+                        <?php foreach( $vcats as $vcat ) : ?>
                         <span><?= $vcat->name; ?></span>
-                    <?php endforeach; ?>
+                        <?php endforeach; ?>
                     </strong>
                 </p>
                 <?php if ($capacity = get_field('capacity')) :?>
-                <p class="vehiclecard__datarow"><?php _e('Capacity', 'viars'); ?>: <strong><?=$capacity ?> t</strong></p>
+                <p class="vehiclecard__datarow"><?php _e('Nosivost', 'viars'); ?>: <strong><?=$capacity ?> t</strong>
+                </p>
                 <?php endif; ?>
                 <?php if ($dimension = get_field('loadingspace_dimension')) :?>
-                <p class="vehiclecard__datarow"><?php _e('Loading space dimension', 'viars'); ?>: <strong><?= $dimension ?> m</strong></p>
+                <p class="vehiclecard__datarow"><?php _e('Dimensija', 'viars'); ?>:
+                    <strong><?= $dimension ?> m</strong></p>
                 <?php endif; ?>
                 <?php if ($volume = get_field('loadingspace_volume')) :?>
-                <p class="vehiclecard__datarow"><?php _e('Loading space Volume', 'viars'); ?>: <strong><?= $volume ?> m<sup>3</m></strong></p>
+                <p class="vehiclecard__datarow"><?php _e('Veličina skladišnog prostora', 'viars'); ?>:
+                    <strong><?= $volume ?>
+                        m<sup>3</m></strong></p>
                 <?php endif; ?>
                 <?php if ($engine = get_field('engine')) :?>
-                <p class="vehiclecard__datarow"><?php _e('Engine', 'viars'); ?>: <strong><?= $engine ?></strong></p>
+                <p class="vehiclecard__datarow"><?php _e('Motor', 'viars'); ?>: <strong><?= $engine ?></strong></p>
                 <?php endif; ?>
 
 
             </div>
             <div class="vehiclecard__details__two">
                 <div>
-                <?php the_content(); ?>
+                    <?php the_content(); ?>
                 </div>
-                <a href="#" class="button startrequest" data-toggle="requestmodal"><?php _e('zatražite ponudu','viars') ?></a>
+                <a href="#" class="button startrequest"
+                    data-toggle="requestmodal"><?php _e('zatražite ponudu','viars') ?></a>
             </div>
         </section>
     </header>
