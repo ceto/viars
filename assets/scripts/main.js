@@ -65,7 +65,7 @@ $(".homecarousel").slick({
 if ($(".deltaframe").length) {
     iFrameResize(
         {
-            log: true
+            log: false
         },
         ".deltaframe"
     );
