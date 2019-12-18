@@ -13,7 +13,7 @@
     </figure>
 </header>
 <section id="contentstart">
-    <iframe id="deltaframe" class="deltaframe" src="https://deltatruck.hu/en/via-iframe" frameborder="0" scrolling="no"></iframe>
+    <iframe id="deltaframe" class="deltaframe" src="https://deltatruck.hu/sr/via-iframe" frameborder="0" scrolling="no"></iframe>
 </section>
 
 <?php endwhile; ?>
