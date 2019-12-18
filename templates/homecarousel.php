@@ -4,7 +4,7 @@
         'posts_per_page' => -1
     ));
 ?>
-<ul class="homecarousel slick-slider">
+<ul class="homecarousel">
 <?php  while ( $the_slides->have_posts() ) : $the_slides->the_post(); ?>
     <li>
     <header id="masthead" class="masthead amasthead--narrow valbtm">
