@@ -62,9 +62,11 @@ $(".homecarousel").slick({
     ]
 });
 
-// iFrameResize(
-//     {
-//         log: false
-//     },
-//     ".deltaiframe"
-// );
+if ($(".deltaframe").length) {
+    iFrameResize(
+        {
+            log: true
+        },
+        ".deltaframe"
+    );
+}

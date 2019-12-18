@@ -11,7 +11,7 @@
             <h3>SDT GROUP D.O.O.</h3>
             <p>Sretenjska 4, 11272, Dobanovci,<br>
                 Beograd, Srbija</p>
-            <p>Centrala:<br>Email: <a href="mailto:offcie@viarent.rs">office@viarent.rs</a></p>
+            <p>Centrala: <a href="tel:+381653050810">+381 65 305 0810</a><br>Email: <a href="mailto:offcie@viarent.rs">office@viarent.rs</a></p>
             <p>VIARENT trademark may be used in Serbia by SDT GROUP D.O.O.</p>
         </div>
         <div class="sitefooter__logos">
