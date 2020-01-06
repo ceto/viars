@@ -54,6 +54,18 @@
     }
 }
 
+.masthead--xnarrow {
+    min-height: 30vw;
+
+    @include breakpoint($bp-large) {
+        min-height: 25vw;
+    }
+
+    @include breakpoint($bp-bigdesktop) {
+        min-height: 20rem;
+    }
+}
+
 .masthead--stripe {
     min-height: 3rem;
 

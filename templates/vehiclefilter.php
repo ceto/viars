@@ -17,10 +17,10 @@
                     'compare'   => '='
                 ),
             ),
-            'relation' => 'OR',
+            'relation' => 'AND',
         ),
         'orderby' => 'position_clause',
-        'order' =>  'DESC',
+        'order' =>  'ASC',
     ));
     ?>
         <ul class="vcatfilter has-<?= count($vcats); ?>-item">

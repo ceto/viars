@@ -1,4 +1,4 @@
-# Copyright (C) 2019 Helsinki Theme
+# Copyright (C) 2020 Helsinki Theme
 # This file is distributed under the same license as the Helsinki Theme package.
 msgid ""
 msgstr ""

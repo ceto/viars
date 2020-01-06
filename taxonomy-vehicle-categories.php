@@ -1,18 +1,19 @@
 <?php $currentcat = get_term(get_queried_object()->term_id); ?>
 
 <?php if ($cathero = get_field('heroimage', $currentcat)) : ?>
-    <figure class="vcathero">
-        <?= wp_get_attachment_image($cathero[ID], 'banner', false); ?>
-    </figure>
+<figure class="vcathero">
+    <?php $bannerurl = wp_get_attachment_url( $cathero[ID], 'banner', false ); ?>
+    <img src="<?php echo $bannerurl ?>" />
+</figure>
 <?php else: ?>
-    <figure class="vcathero">
-        <img src="<?= get_stylesheet_directory_uri(); ?>/dist/images/hero-road.jpg" alt="">
-    </figure>
+<figure class="vcathero">
+    <img src="<?= get_stylesheet_directory_uri(); ?>/dist/images/hero-road.jpg" alt="">
+</figure>
 <?php endif; ?>
 <?php get_template_part('templates/vehiclefilter'); ?>
 
 
-    <?php
+<?php
         if ($currentcat->parent!==0) {
             $childcats = get_terms( array(
                 'taxonomy' => 'vehicle-categories',
@@ -28,8 +29,8 @@
             ) );
         }
     ?>
-    <?php if ( ! empty( $childcats ) && ! is_wp_error( $childcats ) ): ?>
-        <!-- <div class="ps ps--dark ps--xnarrow">
+<?php if ( ! empty( $childcats ) && ! is_wp_error( $childcats ) ): ?>
+<!-- <div class="ps ps--dark ps--xnarrow">
 
             <div class="grid-container">
                 <ul class="menu menu--tntopics">
@@ -46,7 +47,7 @@
                 </ul>
             </div>
         </div> -->
-    <?php endif; ?>
+<?php endif; ?>
 
 
 

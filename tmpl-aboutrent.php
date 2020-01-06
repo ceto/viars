@@ -5,7 +5,7 @@
 ?>
 <?php use Roots\Sage\Titles; ?>
 <?php while (have_posts()) : the_post(); ?>
-<header id="masthead" class="masthead masthead--narrow">
+<header id="masthead" class="masthead masthead--thin">
     <figure class="masthead__bg masthead__bg--fullwidth">
         <?php if(has_post_thumbnail()) : the_post_thumbnail('xlarge'); else: ?>
         <img src="https://source.unsplash.com/1600x600/?truck,lorry" alt="">
@@ -19,7 +19,7 @@
 </div>
 <div class="ps">
     <div class="grid-container">
-    <h2 class="accenttitle"><?php _e('Zašto iznajmljivanje?','viars'); ?></h2>
+        <h2 class="accenttitle"><?php _e('Zašto iznajmljivanje?','viars'); ?></h2>
         <?php get_template_part('templates/advantages'); ?>
     </div>
 </div>

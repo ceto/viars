@@ -80,3 +80,24 @@ img {
     width: 1px;
     min-width: 100%;
 }
+
+.accentexcerpt {
+    text-align: center;
+    line-height: 1.2;
+    color: $cl-gray-weak;
+    h1,
+    h2,
+    h3 {
+        color: $cl-primary-dark;
+        text-transform: uppercase;
+        font-size: 2rem;
+        margin-bottom: 0.75em;
+    }
+    p {
+        font-size: 1.125rem;
+
+        &:last-child() {
+            margin-bottom: 0;
+        }
+    }
+}
