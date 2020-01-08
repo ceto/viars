@@ -3,9 +3,9 @@
   require( '../../../../wp-load.php' );
 
 if($_POST) {
-  $to_Email = "office@viarent.rs";
+  $to_Email = "szekelykalman@delta-truck.hu";
   $dev_Email = "leads@vieeye.hu";
-  $subject = __('Kapcsolatfelvétel a weboldalon','viars');
+  $subject = __('VIARENT.RS | Zatražite ponudu','viars');
   $resp_subject = "SDT GROUP D.O.O. | Viarent Srbjia - Köszönjük, hogy kapcsolatba lépett velünk! ";
 
   if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
@@ -65,10 +65,10 @@ if($_POST) {
     'X-Mailer: PHP/' . phpversion();
 
     $resp_text=__('Tisztelt','viars').' '.$user_Name.'!'."\r\n\n".
-    __('Köszönjük, hogy kapcsolatba lépett velünk! Szakértőnk hamarosan jelentkezik a megadott elérhetőségek egyikén.','viars')."\r\n\n".
+    __('Köszönjük, hogy kapcsolatba lépett velünk! Munkatársunk hamarosan jelentkezik a megadott elérhetőségek egyikén.','viars')."\r\n\n".
     'Üdvözlettel,'."\r\n".'SDT GROUP D.O.O.';
     @wp_mail($user_Email, $resp_subject, $resp_text, $resp_headers);
-    $output = json_encode(array('type'=>'message', 'text' => __('Köszönjük az érdeklődést, az Ön által megadott e-mail-címre üzenetet küldtünk.','viars')));
+    $output = json_encode(array('type'=>'message', 'text' => __('Köszönjük az érdeklődést. Munkatársunk hamarosan jelentkezik a megadott elérhetőségek egyikén.','viars')));
     die($output);
   }
 }
