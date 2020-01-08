@@ -10,6 +10,14 @@
 <?php endif; ?>
 <?php get_template_part('templates/vehiclefilter'); ?>
 <!-- <hr class="fulldivider"> -->
+<?php if ($lead = get_field('vehicleslead', 'option')) : ?>
+    <div class="grid-container ps ps--nobottom ps--narrow">
+        <div class="vlead">
+            <?php echo $lead; ?>
+        </div>
+    </div>
+<?php endif; ?>
+
 <div class="grid-container ps">
 
     <?php if (!have_posts()) : ?>

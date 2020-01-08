@@ -49,7 +49,13 @@
         </div> -->
 <?php endif; ?>
 
-
+<?php if ($lead = get_field('vehicleslead', 'option')) : ?>
+    <div class="grid-container ps ps--nobottom ps--narrow">
+        <div class="vlead">
+            <?php echo $lead; ?>
+        </div>
+    </div>
+<?php endif; ?>
 
 <!-- <hr class="fulldivider"> -->
 <div class="grid-container ps">
