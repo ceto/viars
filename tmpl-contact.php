@@ -42,7 +42,7 @@
 <?php endwhile; ?>
 
 <script async defer type="text/javascript"
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnOvBvXqpXIOwfS5YHXCO-5pKFSAI0aqc&sensor=false"></script>
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtnKZlzItFYvs7X9kN8p26rvnrtWxeNT8&sensor=false"></script>
 <script type="text/javascript">
 //   var map;
 //   var map2;
