@@ -41,7 +41,7 @@
 </div>
 <?php endwhile; ?>
 
-<script async defer type="text/javascript"
+<script type="text/javascript"
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtnKZlzItFYvs7X9kN8p26rvnrtWxeNT8&sensor=false"></script>
 <script type="text/javascript">
 //   var map;
