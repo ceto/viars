@@ -27,7 +27,7 @@
                         <label class="speci">Ime i prezime*
                             <input id="r_name" name="r_name" type="text" required>
                             <span class="form-error">
-                                It's required.
+                                Obavezno polje!
                             </span>
                         </label>
                     </div>
