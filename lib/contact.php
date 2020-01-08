@@ -3,10 +3,10 @@
   require( '../../../../wp-load.php' );
 
 if($_POST) {
-  $to_Email = "szekelykalman@delta-truck.hu";
-  $dev_Email = "leads@vieeye.hu";
-  $subject = __('VIARENT.RS | Zatražite ponudu','viars');
-  $resp_subject = "SDT GROUP D.O.O. | Viarent Srbjia - Köszönjük, hogy kapcsolatba lépett velünk! ";
+  $to_Email = "office@viarent.rs";
+  $dev_Email = "szekelykalman@delta-truck.hu";
+  $subject = __('VIARENT.RS | Prispeo zahtev za ponudu – Zakup.','viars');
+  $resp_subject = "SDT GROUP D.O.O. | Viarent.rs - Hvala što ste nam se obratili";
 
   if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
 
@@ -20,7 +20,7 @@ if($_POST) {
   }
 
   if( !isset($_POST["userName"]) || !isset($_POST["userEmail"]) ) {
-    $output = json_encode(array('type'=>'error', 'text' => __('Hiányzó kötelező mező','viars') ));
+    $output = json_encode(array('type'=>'error', 'text' => __('Obavezno polje koje nedostaje','viars') ));
     die($output);
   }
   $user_Name = filter_var($_POST["userName"], FILTER_SANITIZE_STRING);
@@ -35,11 +35,11 @@ if($_POST) {
   $user_Message = str_replace("&#39;", "'", $user_Message);
 
   if(strlen($user_Name)<4) {
-    $output = json_encode(array('type'=>'error', 'text' => __('Kérjük, adja meg a teljes nevét!','viars')));
+    $output = json_encode(array('type'=>'error', 'text' => __('Molimo da navedete vaše puno ime i prezime!','viars')));
     die($output);
   }
   if(!filter_var($user_Email, FILTER_VALIDATE_EMAIL)) {
-    $output = json_encode(array('type'=>'error', 'text' => __('Érvénytelen e-mail-cím','viars')));
+    $output = json_encode(array('type'=>'error', 'text' => __('Invalid e-mail','viars')));
     die($output);
   }
 //   if(strlen($user_Tel)<6) {
@@ -56,7 +56,7 @@ if($_POST) {
   $sentMail = @wp_mail($to_Email, $subject, 'Vehicle: '.$user_Vehicle. "\r\n". 'Name: '.$user_Name. "\r\n". 'E-mail: '.$user_Email. "\r\n" .'Phone: '.$user_Tel . "\r\n". 'Company: '.$user_Company. "\r\n" .'Address: '.$user_Address . "\r\n". "\r\n\n"  .' '.$user_Message, $headers);
 
   if(!$sentMail) {
-    $output = json_encode(array('type'=>'error', 'text' => __('Üzenet küldése nem sikerült. Vegye fel velünk a kapcsolatot e-mailben vagy telefonon!','viars')));
+    $output = json_encode(array('type'=>'error', 'text' => __('Slanje poruke nije uspelo. Molimo obratite se mejlom ili telefonom!','viars')));
     die($output);
   } else {
 
@@ -64,11 +64,11 @@ if($_POST) {
     'Reply-To: '.$to_Email.'' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
-    $resp_text=__('Tisztelt','viars').' '.$user_Name.'!'."\r\n\n".
-    __('Köszönjük, hogy kapcsolatba lépett velünk! Munkatársunk hamarosan jelentkezik a megadott elérhetőségek egyikén.','viars')."\r\n\n".
-    'Üdvözlettel,'."\r\n".'SDT GROUP D.O.O.';
+    $resp_text=__('Poštovani gospodine','viars').' '.$user_Name.'!'."\r\n\n".
+    __('Hvala što ste nam se obratili. Naš saradnik će vam se uskoro javiti preko datog kontakta.','viars')."\r\n\n".
+    'S poštovanjem,'."\r\n".'SDT GROUP D.O.O.';
     @wp_mail($user_Email, $resp_subject, $resp_text, $resp_headers);
-    $output = json_encode(array('type'=>'message', 'text' => __('Köszönjük az érdeklődést. Munkatársunk hamarosan jelentkezik a megadott elérhetőségek egyikén.','viars')));
+    $output = json_encode(array('type'=>'message', 'text' => __('Hvala što ste nam se obratili. Naš saradnik će vam se uskoro javiti preko datog kontakta.','viars')));
     die($output);
   }
 }

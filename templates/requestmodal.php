@@ -19,7 +19,7 @@
                 <div class="grid-x grid-margin-x">
                     <div class="cell small-12 text-center">
                         <div data-abide-error class="alert callout" style="display: none;">
-                            <p><i class="fi-alert"></i> There are some errors in your form.</p>
+                            <p>Greška u obrascu!</p>
                         </div>
 
                     </div>
@@ -35,7 +35,7 @@
                         <label class="speci">E-mail*
                             <input id="r_email" name="r_email" type="email" required>
                             <span class="form-error">
-                                I'm required!
+                                Obavezno polje!
                             </span>
                         </label>
                     </div>
@@ -43,7 +43,7 @@
                         <label class="speci">Telefon*
                             <input id="r_tel" name="r_tel" type="text" required>
                             <span class="form-error">
-                                I'm required!
+                                Obavezno polje!
                             </span>
                         </label>
                     </div>
@@ -51,7 +51,7 @@
                         <label class="speci">Naziv kompanije*
                             <input id="r_company" name="r_company" type="text" required>
                             <span class="form-error">
-                                I'm required!
+                                Obavezno polje!
                             </span>
                         </label>
                     </div>
@@ -59,7 +59,7 @@
                         <label class="speci">Adresa*
                             <input id="r_address" name="r_address" type="text" required>
                             <span class="form-error">
-                                I'm required!
+                                Obavezno polje!
                             </span>
                         </label>
                     </div>
