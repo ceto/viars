@@ -50,7 +50,8 @@ function viars_custom_post_type() {
 		'has_archive'           => true,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
-		'capability_type'       => 'page',
+        'capability_type'       => 'page',
+        'rewrite'               => array('slug' => 'iznajmite-vozilo')
 	);
     register_post_type( 'vehicle', $args );
 
@@ -130,7 +131,7 @@ function viars_add_vehicle_taxonomies(){
                     'show_ui' => true,
                     'show_admin_column' => true,
                     'query_var' => true,
-                    'rewrite' => array( 'slug' => 'vehicles' )
+                    'rewrite' => array( 'slug' => 'vozila' )
     ));
 
     $attributes_labels = array(

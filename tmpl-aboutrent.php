@@ -34,7 +34,7 @@
                 <?php the_content(); ?>
             </div>
             <br><br><br>
-            <img src="<?= get_stylesheet_directory_uri().'/dist/images/aboutrent.jpg'; ?>" alt="">
+            <img src="<?= get_stylesheet_directory_uri().'/dist/images/aboutrent2.jpg'; ?>" alt="">
         </div>
     </div>
 </section>
