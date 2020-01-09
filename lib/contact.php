@@ -30,6 +30,7 @@ if($_POST) {
   $user_Address = filter_var($_POST["userAddress"], FILTER_SANITIZE_STRING);
   $user_Message = filter_var($_POST["userMsg"], FILTER_SANITIZE_STRING);
   $user_Vehicle = filter_var($_POST["userVehicle"], FILTER_SANITIZE_STRING);
+  $user_Time = filter_var($_POST["userTime"], FILTER_SANITIZE_STRING);
 
   $user_Message = str_replace("\&#39;", "'", $user_Message);
   $user_Message = str_replace("&#39;", "'", $user_Message);
@@ -53,7 +54,7 @@ if($_POST) {
   'BCC: '.$dev_Email.'' . "\r\n" .
   'X-Mailer: PHP/' . phpversion();
 
-  $sentMail = @wp_mail($to_Email, $subject, 'Vehicle: '.$user_Vehicle. "\r\n". 'Name: '.$user_Name. "\r\n". 'E-mail: '.$user_Email. "\r\n" .'Phone: '.$user_Tel . "\r\n". 'Company: '.$user_Company. "\r\n" .'Address: '.$user_Address . "\r\n". "\r\n\n"  .' '.$user_Message, $headers);
+  $sentMail = @wp_mail($to_Email, $subject, 'Vehicle: '.$user_Vehicle. "\r\n". 'Name: '.$user_Name. "\r\n". 'E-mail: '.$user_Email. "\r\n" .'Phone: '.$user_Tel . "\r\n". 'Rental period: '.$user_Time. "\r\n" . 'Company: '.$user_Company. "\r\n" .'Address: '.$user_Address . "\r\n". "\r\n\n"  .' '.$user_Message, $headers);
 
   if(!$sentMail) {
     $output = json_encode(array('type'=>'error', 'text' => __('Slanje poruke nije uspelo. Molimo obratite se mejlom ili telefonom!','viars')));
