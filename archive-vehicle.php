@@ -4,7 +4,8 @@
         <?= wp_get_attachment_image($cathero[ID], 'banner', false); ?>
     </figure>
 <?php else: ?>
-    <figure class="vcathero">
+    <figure class="vcathero" style="background-image:url('<?= get_stylesheet_directory_uri(); ?>/dist/images/hero-road.jpg')">
+
         <img src="<?= get_stylesheet_directory_uri(); ?>/dist/images/hero-road.jpg" alt="">
     </figure>
 <?php endif; ?>

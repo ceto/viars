@@ -1,12 +1,12 @@
 <?php $currentcat = get_term(get_queried_object()->term_id); ?>
 
 <?php if ($cathero = get_field('heroimage', $currentcat)) : ?>
-<figure class="vcathero">
-    <?php $bannerurl = wp_get_attachment_url( $cathero[ID], 'banner', false ); ?>
-    <img src="<?php echo $bannerurl ?>" />
+<?php $bannerurl = wp_get_attachment_url( $cathero[ID], 'banner', false ); ?>
+<figure class="vcathero" style="background-image:url('<?php echo $bannerurl ?>')">
+        <img src="<?php echo $bannerurl ?>" />
 </figure>
 <?php else: ?>
-<figure class="vcathero">
+    <figure class="vcathero" style="background-image:url('<?= get_stylesheet_directory_uri(); ?>/dist/images/hero-road.jpg')">
     <img src="<?= get_stylesheet_directory_uri(); ?>/dist/images/hero-road.jpg" alt="">
 </figure>
 <?php endif; ?>

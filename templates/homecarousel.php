@@ -8,8 +8,8 @@
     <?php  while ( $the_slides->have_posts() ) : $the_slides->the_post(); ?>
     <?php if (has_post_thumbnail()) : ?>
     <li>
-        <figure class="vcathero">
-            <?php $bannerurl = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'banner' ); ?>
+        <?php $bannerurl = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'banner' ); ?>
+        <figure class="vcathero" style="background-image:url('<?php echo $bannerurl ?>')">
             <img src="<?php echo $bannerurl ?>" />
         </figure>
     </li>
