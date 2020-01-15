@@ -33,10 +33,19 @@
             <div class="twocolumn">
                 <?php the_content(); ?>
             </div>
+        </div>
+    </div>
+</section>
+<hr aclass="fulldivider">
+<section id="contentstart" class="ps">
+    <div class="grid-container">
+        <div class="bodycopy">
+            <div class="twocolumn">
+                <?php the_field('content') ?>
+            </div>
             <br><br><br>
             <img src="<?= get_stylesheet_directory_uri().'/dist/images/aboutrent2.jpg'; ?>" alt="">
         </div>
     </div>
 </section>
-
 <?php endwhile; ?>

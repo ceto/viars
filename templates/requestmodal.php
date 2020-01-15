@@ -13,7 +13,7 @@
     <div class="mobilemodal__inner">
         <div id="successresult" class="successresult">
             <button class="button" data-close aria-label="Close modal" type="button">
-                Close
+            Zatvori prozor
             </button>
         </div>
         <form id="contact_form" class="contactform" action="<?= get_template_directory_uri(); ?>/lib/contact.php"

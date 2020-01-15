@@ -1,3 +1,9 @@
+<!-- <aside class="flactions" data-magellan>
+    <a href="mailto:office@viarent.rs"><div class="icon icon-law"></div></a>
+    <a href="tel:+38165305081"><div class="icon icon-calendar"></div></a>
+    <a href="#"><div class="icon icon-penny"></div></a>
+    <a href="#"><div class="icon icon-calendar"></div></a>
+</aside> -->
 <footer class="sitefooter">
     <div class="sitefooter__inner grid-container">
         <nav class="sitefooter__nav">
