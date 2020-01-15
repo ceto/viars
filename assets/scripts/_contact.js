@@ -58,10 +58,13 @@ $("#contact_form").on("submit", function(ev, frm) {
 
                 //load json data from server and output message
                 if (response.type === "error") {
-                    output = '<p class="form-error">' + response.text + "</p>";
+                    output = '<p class="itsnotok">' + response.text + "</p>";
                     console.log(response.text);
                 } else {
-                    output = '<p class="form-helper">' + response.text + "</p>";
+                    output = '<p class="itsok">' + response.text + "</p>";
+                    $("#contact_form").addClass("is-alreadysent");
+                    $("#successresult").prepend(output);
+                    $("#successresult").addClass("is-active");
 
                     var fn = window.gtag;
                     if (typeof fn === "function") {
@@ -83,8 +86,7 @@ $("#contact_form").on("submit", function(ev, frm) {
                     .slideDown();
                 $("#contact_submit").removeClass("disabled");
                 $("#contact_submit").removeAttr("disabled");
-
-                // $("#contact_submit").text("Küldés");
+                // $("#contact_submit").text("Pošaljite");
             },
             "json"
         );

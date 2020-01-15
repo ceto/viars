@@ -3,10 +3,12 @@
   require( '../../../../wp-load.php' );
 
 if($_POST) {
+//   $to_Email = "szabogabor@hydrogene.hu";
+//   $dev_Email = "szabogabi@gmail.com";
   $to_Email = "office@viarent.rs";
   $dev_Email = "szekelykalman@delta-truck.hu";
-  $subject = __('VIARENT.RS | Prispeo zahtev za ponudu – Zakup.','viars');
-  $resp_subject = "SDT GROUP D.O.O. | Viarent.rs - Hvala što ste nam se obratili";
+  $subject = __('[DEV] VIARENT.RS | Prispeo zahtev za ponudu – Zakup.','viars');
+  $resp_subject = "[DEV] SDT GROUP D.O.O. | Viarent.rs - Hvala što ste nam se obratili";
 
   if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
 
@@ -49,12 +51,79 @@ if($_POST) {
 //   }
 
 
-  $headers = 'From: '.$user_Email.'' . "\r\n" .
-  'Reply-To: '.$user_Email.'' . "\r\n" .
-  'BCC: '.$dev_Email.'' . "\r\n" .
-  'X-Mailer: PHP/' . phpversion();
+//   $headers = 'From: '.$user_Email.'' . "\r\n" .
+//   'Reply-To: '.$user_Email.'' . "\r\n" .
+//   'BCC: '.$dev_Email.'' . "\r\n" .
+//   'X-Mailer: PHP/' . phpversion();
 
-  $sentMail = @wp_mail($to_Email, $subject, 'Vehicle: '.$user_Vehicle. "\r\n". 'Name: '.$user_Name. "\r\n". 'E-mail: '.$user_Email. "\r\n" .'Phone: '.$user_Tel . "\r\n". 'Rental period: '.$user_Time. "\r\n" . 'Company: '.$user_Company. "\r\n" .'Address: '.$user_Address . "\r\n". "\r\n\n"  .' '.$user_Message, $headers);
+  $headers = array(
+      'From: '.$user_Email,
+      'Reply-To: '.$user_Email,
+      'BCC: '.$dev_Email,
+      'X-Mailer: PHP/' . phpversion(),
+      'Content-Type: text/html; charset=UTF-8'
+  );
+
+  ?>
+  <?php ob_start(); ?>
+    <table width="100%" cellpadding="5" cellspacing="0">
+    <tr bgcolor="#EAF2FA">
+        <td colspan="2"><strong>Vehicle:</strong></td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td><td><?= $user_Vehicle ?></td>
+    </tr>
+    <tr bgcolor="#EAF2FA">
+        <td colspan="2"><strong>Name:</strong></td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td><td><?= $user_Name ?></td>
+    </tr>
+    <tr bgcolor="#EAF2FA">
+        <td colspan="2"><strong>E-mail</strong></td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td><td><?= $user_Email ?></td>
+    </tr>
+    <tr bgcolor="#EAF2FA">
+        <td colspan="2"><strong>Phone:</strong></td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td><td><?= $user_Tel ?></td>
+    </tr>
+    <tr bgcolor="#EAF2FA">
+        <td colspan="2"><strong>Rental period:</strong></td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td><td><?= $user_Time ?></td>
+    </tr>
+    <tr bgcolor="#EAF2FA">
+        <td colspan="2"><strong>Company</strong></td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td><td><?= $user_Company ?></td>
+    </tr>
+    <tr bgcolor="#EAF2FA">
+        <td colspan="2"><strong>Address:</strong></td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td><td><?= $user_Address ?></td>
+    </tr>
+    <tr bgcolor="#EAF2FA">
+        <td colspan="2"><strong>Message:</strong></td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td><td><?= $user_Message ?></td>
+    </tr>
+    </table>
+    <br><hr><br>
+    <?php $htmlcontent = ob_get_clean(); ?>
+  
+  <?php
+
+  $sentMail = @wp_mail($to_Email, $subject, $htmlcontent, $headers);
+  
+//   $sentMail = @wp_mail($to_Email, $subject, '<strong>Vehicle:</strong> '.$user_Vehicle. "\r\n". 'Name: '.$user_Name. "\r\n". 'E-mail: '.$user_Email. "\r\n" .'Phone: '.$user_Tel . "\r\n". 'Rental period: '.$user_Time. "\r\n" . 'Company: '.$user_Company. "\r\n" .'Address: '.$user_Address . "\r\n". "\r\n\n"  .' '.$user_Message, $headers);
 
   if(!$sentMail) {
     $output = json_encode(array('type'=>'error', 'text' => __('Slanje poruke nije uspelo. Molimo obratite se mejlom ili telefonom!','viars')));

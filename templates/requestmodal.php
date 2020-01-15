@@ -11,7 +11,11 @@
     </header>
 
     <div class="mobilemodal__inner">
-
+        <div id="successresult" class="successresult">
+            <button class="button" data-close aria-label="Close modal" type="button">
+                Close
+            </button>
+        </div>
         <form id="contact_form" class="contactform" action="<?= get_template_directory_uri(); ?>/lib/contact.php"
             method="post" data-abide novalidate>
 
@@ -19,7 +23,7 @@
                 <div class="grid-x grid-margin-x">
                     <div class="cell small-12 text-center">
                         <div data-abide-error class="alert callout" style="display: none;">
-                            <p>Greška u obrascu!</p>
+                            <p style="font-size:1rem; font-weight: bold; color:#c10017">Greška u obrascu!</p>
                         </div>
 
                     </div>

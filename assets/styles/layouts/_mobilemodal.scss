@@ -112,3 +112,29 @@ html.is-reveal-open body {
     background-color: rgba(#fff, 0.75);
     box-shadow: 0 0 0.875rem 0 rgba(#000, 0.25);
 }
+
+.contactform {
+    &.is-alreadysent {
+        display: none;
+    }
+}
+.requestmodal .successresult {
+    display: none;
+    &.is-active {
+        display: block;
+    }
+    p {
+        font-size: 1.125rem;
+        font-weight: $fw-bold;
+    }
+}
+
+.requestmodal #result {
+    p {
+        font-size: 1rem;
+        font-weight: $fw-bold;
+        &.itsnotok {
+            color: $cl-primary;
+        }
+    }
+}
