@@ -4,8 +4,8 @@
     <div class="grid-container">
         <h1 class="tntitle">Truck <em>News</em></h1>
         <?php
-            if (has_nav_menu('primary_navigation')) :
-                wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'menu menu--tntopics']);
+            if (has_nav_menu('tn_navigation')) :
+                wp_nav_menu(['theme_location' => 'tn_navigation', 'menu_class' => 'menu menu--tntopics']);
             endif;
         ?>
     </div>

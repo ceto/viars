@@ -30,6 +30,9 @@ function setup() {
     'primary_navigation' => __('Primary Navigation', 'viars')
   ]);
   register_nav_menus([
+    'tn_navigation' => __('Truck News Navigation', 'viars')
+  ]);
+  register_nav_menus([
     'footermini_navigation' => __('Footer Mini Navigation', 'viars')
   ]);
 
