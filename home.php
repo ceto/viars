@@ -12,10 +12,8 @@
 </header>
 <hr class="fulldivider">
 <div class="grid-container ps">
-    <br><br><br><br>
-    <h3>Coming soon &hellip;</h3>
-    <br><br><br><br><br><br><br>
-    <!-- <section class="spm">
+
+    <section class="spm">
         <div class="spm__main">
             <?php if (!have_posts()) : ?>
             <div class="alert alert-warning">
@@ -36,6 +34,6 @@
         <aside class="spm__side sidebar">
             <?php dynamic_sidebar('sidebar-primary'); ?>
         </aside>
-    </section> -->
+    </section>
 
 </div>
