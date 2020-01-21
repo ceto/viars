@@ -28,7 +28,7 @@
                 </p>
                 <?php endif; ?>
                 <?php if ($dimension = get_field('loadingspace_dimension')) :?>
-                <p class="vehiclecard__datarow"><?php _e('Dimensija', 'viars'); ?>:
+                <p class="vehiclecard__datarow"><?php _e('Dimenzija', 'viars'); ?>:
                     <strong><?= $dimension ?> m</strong></p>
                 <?php endif; ?>
                 <?php if ($volume = get_field('loadingspace_volume')) :?>

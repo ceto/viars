@@ -26,7 +26,7 @@
 <ul class="catpromolist">
     <li>
         <div class="catpromotecard">
-            <h3>IZNAJMLJIVANJE JE BOLJE!</h3>
+            <h3>BOLJE JE IZNAJMITI!</h3>
             <p>Svet se menja tako brzo da je svima potrebno više fleksibilnosti. Iznajmljivanje posredstvom Viarent
                 pruža rešenje za to.</p>
         </div>
