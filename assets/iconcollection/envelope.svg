@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>envelope</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="envelope">
+            <polygon id="Fill-1" fill="#232020" points="0 40 40 40 40 0 0 0"></polygon>
+            <g id="Group-10" transform="translate(6.000000, 10.309000)" fill="#FFFFFF">
+                <path d="M13.6547,14.199 L10.3167,11.279 L0.7777,19.455 C1.1247,19.779 1.5907,19.978 2.1077,19.978 L25.2007,19.978 C25.7147,19.978 26.1807,19.779 26.5267,19.455 L16.9917,11.279 L13.6547,14.199 Z" id="Fill-2"></path>
+                <path d="M26.5317,1.2361 C26.1847,0.9121 25.7187,0.7131 25.2007,0.7131 L2.1077,0.7131 C1.5947,0.7131 1.1277,0.9121 0.7817,1.2391 L13.6547,12.2721 L26.5317,1.2361 Z" id="Fill-4"></path>
+                <polygon id="Fill-6" points="0.1684 2.4041 0.1684 18.4101 9.4804 10.4981"></polygon>
+                <polygon id="Fill-8" points="17.8295 10.4978 27.1415 18.4098 27.1415 2.3978"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

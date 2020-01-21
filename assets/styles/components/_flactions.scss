@@ -29,26 +29,27 @@
 
     a {
         color: #fff;
-        background-color: $cl-dark;
+        // background-color: $cl-dark;
         display: inline-block;
         padding: 0;
         font-weight: $global-weight-bold;
         //width: 49.5%;
         margin: 0 0.125em;
         text-align: center;
-        border-radius: $global-radius $global-radius 0 0;
+        transform: rotate(90deg) translateX(0.125em);
 
         &:hover,
         &:focus {
-            background-color: $cl-primary;
+            // background-color: $cl-primary;
             text-decoration: none;
+            filter: contrast(100);
         }
 
         .icon {
             fill: currentColor;
             stroke: currentcolor;
-            width: 3em;
-            height: 3em;
+            width: 2.5em;
+            height: 2.5em;
         }
     }
 }

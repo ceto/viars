@@ -53,3 +53,32 @@
         justify-content: flex-end;
     }
 }
+
+.sitefooter__socials {
+    margin: 0 0 1rem;
+    a {
+        color: #fff;
+        // background-color: $cl-dark;
+        display: inline-block;
+        padding: 0;
+        font-weight: $global-weight-bold;
+        //width: 49.5%;
+        margin: 0 0.125em;
+        text-align: center;
+        filter: invert(0.8);
+
+        &:hover,
+        &:focus {
+            // background-color: $cl-primary;
+            text-decoration: none;
+            filter: contrast(100);
+        }
+
+        .icon {
+            fill: currentColor;
+            stroke: currentcolor;
+            width: 2.25em;
+            height: 2.25em;
+        }
+    }
+}

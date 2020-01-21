@@ -1,9 +1,8 @@
-<!-- <aside class="flactions" data-magellan>
-    <a href="mailto:office@viarent.rs"><div class="icon icon-law"></div></a>
-    <a href="tel:+38165305081"><div class="icon icon-calendar"></div></a>
-    <a href="#"><div class="icon icon-penny"></div></a>
-    <a href="#"><div class="icon icon-calendar"></div></a>
-</aside> -->
+<aside class="flactions">
+    <a href="mailto:office@viarent.rs"><div class="icon icon-envelope"></div></a>
+    <a target="_blank" href="https://www.instagram.com/viarent_srbija/"><div class="icon icon-instagram"></div></a>
+    <a target="_blank" href="https://www.facebook.com/Viarent-Srbija-114602583288278/"><div class="icon icon-facebook"></div></a>
+</aside>
 <footer class="sitefooter">
     <div class="sitefooter__inner grid-container">
         <nav class="sitefooter__nav">
@@ -18,6 +17,11 @@
             <p>Sretenjska 4, 11272, Dobanovci,<br>
                 Beograd, Srbija</p>
             <p>Centrala: <a href="tel:+381653050810">+381 65 305 0810</a><br>Email: <a href="mailto:offcie@viarent.rs">office@viarent.rs</a></p>
+            <nav class="sitefooter__socials">
+                <a target="_blank" href="https://www.facebook.com/Viarent-Srbija-114602583288278/"><div class="icon icon-facebook"></div></a>
+                <a target="_blank" href="https://www.instagram.com/viarent_srbija/"><div class="icon icon-instagram"></div></a>
+                <a href="mailto:office@viarent.rs"><div class="icon icon-envelope"></div></a>
+            </nav>
             <p>VIARENT trademark may be used in Serbia by SDT GROUP D.O.O.</p>
         </div>
         <div class="sitefooter__logos">

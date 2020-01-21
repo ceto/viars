@@ -6,11 +6,17 @@
 
 .icon-calendar { background-image: url('png/calendar.png'); background-repeat: no-repeat; }
 
+.icon-envelope { background-image: url('png/envelope.png'); background-repeat: no-repeat; }
+
+.icon-facebook { background-image: url('png/facebook.png'); background-repeat: no-repeat; }
+
 .icon-felpotkocsi { background-image: url('png/felpotkocsi.png'); background-repeat: no-repeat; }
 
 .icon-freeze { background-image: url('png/freeze.png'); background-repeat: no-repeat; }
 
 .icon-furgon { background-image: url('png/furgon.png'); background-repeat: no-repeat; }
+
+.icon-instagram { background-image: url('png/instagram.png'); background-repeat: no-repeat; }
 
 .icon-kisteherauto { background-image: url('png/kisteherauto.png'); background-repeat: no-repeat; }
 
@@ -19,6 +25,8 @@
 .icon-nyergesvontato { background-image: url('png/nyergesvontato.png'); background-repeat: no-repeat; }
 
 .icon-penny { background-image: url('png/penny.png'); background-repeat: no-repeat; }
+
+.icon-print { background-image: url('png/print.png'); background-repeat: no-repeat; }
 
 .icon-service { background-image: url('png/service.png'); background-repeat: no-repeat; }
 
