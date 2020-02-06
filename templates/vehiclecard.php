@@ -40,6 +40,22 @@
                 <p class="vehiclecard__datarow"><?php _e('Motor', 'viars'); ?>: <strong><?= $engine ?></strong></p>
                 <?php endif; ?>
 
+                <?php if ($axle_configuration = get_field('axle_configuration')) :?>
+                <p class="vehiclecard__datarow"><?php _e('Broj osovina', 'viars'); ?>:
+                    <strong><?= $axle_configuration ?></strong>
+                </p>
+                <?php endif; ?>
+                <?php if ($lifting_capacity = get_field('lifting_capacity')) :?>
+                <p class="vehiclecard__datarow"><?php _e('Nosivost', 'viars'); ?>:
+                    <strong><?= $lifting_capacity ?></strong>
+                </p>
+                <?php endif; ?>
+                <?php if ($gross_weight = get_field('gross_weight')) :?>
+                <p class="vehiclecard__datarow"><?php _e('Ukupna masa', 'viars'); ?>:
+                    <strong><?= $gross_weight ?></strong>
+                </p>
+                <?php endif; ?>
+
 
             </div>
             <div class="vehiclecard__details__two">

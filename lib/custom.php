@@ -22,6 +22,22 @@
     // 5. Unhide native metabox
     add_filter('acf/settings/remove_wp_meta_box', '__return_false');
 
+    // 6. Save JSON
+    add_filter('acf/settings/save_json', 'viars_acf_json_save_point');
+    function viars_acf_json_save_point( $path ) {
+        $path = get_stylesheet_directory() . '/lib/acf/json';
+        return $path;
+    }
+
+
+    // 7. Load JSON
+    add_filter('acf/settings/load_json', 'viars_acf_json_load_point');
+    function viars_acf_json_load_point( $paths ) {
+        unset($paths[0]);
+        $paths[] = get_stylesheet_directory() . '/lib/acf/json';
+        return $paths;
+    }
+
     /** Create Options Pages */
     if( function_exists('acf_add_options_page') ) {
         acf_add_options_page(array(

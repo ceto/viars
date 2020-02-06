@@ -1,6 +1,7 @@
 <aside class="toprow">
     <div class="toprow__content">
-        Centrala: <a href="tel:+381653050810">+381 65 305 0810</a> | E-mail: <a href="mailto:offcie@viarent.rs">office@viarent.rs</a>
+        Centrala: <a href="tel:+38162425888">+381 6242 5888</a> | E-mail: <a
+            href="mailto:offcie@viarent.rs">office@viarent.rs</a>
     </div>
 </aside>
 <header id="siteheader" class="siteheader">
