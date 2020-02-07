@@ -31,7 +31,7 @@
                 <p class="vehiclecard__datarow"><?php _e('Dimenzija', 'viars'); ?>:
                     <strong><?= $dimension ?> m</strong></p>
                 <?php endif; ?>
-                <?php if ($volume = get_field('loadingspace_volume')) :?>
+                <?php if ($volume = get_field('loading_space_volume')) :?>
                 <p class="vehiclecard__datarow"><?php _e('Veličina skladišnog prostora', 'viars'); ?>:
                     <strong><?= $volume ?>
                         m<sup>3</m></strong></p>
