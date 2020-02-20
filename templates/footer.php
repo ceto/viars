@@ -23,7 +23,7 @@
             <p>Sretenjska 4, 11272, Dobanovci,<br>
                 Beograd, Srbija</p>
             <p>Centrala: <a href="tel:+38162425888">+381 6242 5888</a><br>Email: <a
-                    href="mailto:offcie@viarent.rs">office@viarent.rs</a></p>
+                    href="mailto:office@viarent.rs">office@viarent.rs</a></p>
             <nav class="sitefooter__socials">
                 <a target="_blank" href="https://www.facebook.com/Viarent-Srbija-114602583288278/">
                     <div class="icon icon-facebook"></div>
@@ -35,7 +35,7 @@
                     <div class="icon icon-envelope"></div>
                 </a>
             </nav>
-            <p>VIARENT trademark may be used in Serbia by SDT Renting D.O.O.</p>
+            <p>Na tržištu Republike Srbije licencirani predstavnik brenda VIARENT je kompanija SDT Renting D.O.O.</p>
         </div>
         <div class="sitefooter__logos">
             <img src="<?= get_stylesheet_directory_uri(); ?>/dist/images/sdtrenting.svg" alt="">
