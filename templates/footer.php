@@ -9,6 +9,12 @@
         <div class="icon icon-facebook"></div>
     </a>
 </aside>
+<?php if (!is_tax('vehicle-categories') && !is_post_type_archive('vehicle') && !is_singular('vehicle') ): ?>
+<aside class="flmactions">
+    <a href="mailto:office@viarent.rs">PoŠalji poruku</a>
+    <a href="tel:+38162425888">+381 6242 5888</a>
+</aside>
+<?php endif; ?>
 <footer class="sitefooter">
     <div class="sitefooter__inner grid-container">
         <nav class="sitefooter__nav">
