@@ -33,6 +33,7 @@ use Roots\Sage\Wrapper;
     <?php if (is_post_type_archive('vehicle') || is_tax('vehicle-categories') || is_singular('vehicle') ) :  ?>
         <?php get_template_part('templates/requestmodal'); ?>
     <?php endif; ?>
+    <?php get_template_part('templates/contactmodal'); ?>
     <?php wp_footer(); ?>
 </body>
 

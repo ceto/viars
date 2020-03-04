@@ -1,5 +1,5 @@
 <aside class="flactions">
-    <a href="mailto:office@viarent.rs">
+    <a href="#" data-toggle="contactmodal">
         <div class="icon icon-envelope"></div>
     </a>
     <a target="_blank" href="https://www.instagram.com/viarent_srbija/">
@@ -11,7 +11,7 @@
 </aside>
 <?php if (!is_tax('vehicle-categories') && !is_post_type_archive('vehicle') && !is_singular('vehicle') ): ?>
 <aside class="flmactions">
-    <a href="mailto:office@viarent.rs">PoŠalji poruku</a>
+    <a href="#" data-toggle="contactmodal">PoŠalji poruku</a>
     <a href="tel:+38162425888">+381 6242 5888</a>
 </aside>
 <?php endif; ?>
@@ -37,7 +37,7 @@
                 <a target="_blank" href="https://www.instagram.com/viarent_srbija/">
                     <div class="icon icon-instagram"></div>
                 </a>
-                <a href="mailto:office@viarent.rs">
+                <a href="#" data-toggle="contactmodal">
                     <div class="icon icon-envelope"></div>
                 </a>
             </nav>
