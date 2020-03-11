@@ -41,7 +41,7 @@
                     <div class="icon icon-envelope"></div>
                 </a>
             </nav>
-            <p>Na tržištu Republike Srbije licencirani predstavnik brenda VIARENT je kompanija SDT Renting D.O.O.</p>
+            <p>Na tržištu Republike Srbije licencirani predstavnik brenda VIARENT je kompanija SDT Renting D.O.O. SDT Renting je društvo sa ograničenom odgovornošću, osnovano 2019. godine. Registrovano je za iznajmljivanje komercijalnih vozila.</p>
         </div>
         <div class="sitefooter__logos">
             <img src="<?= get_stylesheet_directory_uri(); ?>/dist/images/sdtrenting.svg" alt="">

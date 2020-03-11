@@ -1,9 +1,9 @@
 <?php use Roots\Sage\Titles; ?>
 <?php while (have_posts()) : the_post(); ?>
-<header id="masthead" class="masthead masthead--narrow">
+<header id="masthead" class="masthead masthead--thin">
     <figure class="masthead__bg masthead__bg--fullwidth">
         <?php if(has_post_thumbnail()) : the_post_thumbnail('xlarge'); else: ?>
-        <img src="https://source.unsplash.com/1600x600/?truck,lorry" alt="">
+            <img src="<?= get_stylesheet_directory_uri(); ?>/dist/images/hero-road.jpg" alt="">
         <?php endif; ?>
     </figure>
 </header>
