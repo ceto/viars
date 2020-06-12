@@ -1,6 +1,6 @@
 <aside class="toprow">
     <div class="toprow__content">
-        Centrala: <a href="tel:+38162425888">+381 6242 5888</a> | E-mail: <a
+        Centrala: <a href="tel:+38162425888">+381 62 425 888</a> | E-mail: <a
             href="mailto:office@viarent.rs">office@viarent.rs</a>
     </div>
 </aside>
@@ -14,6 +14,6 @@
         ?>
     </nav>
     <div class="siteheader__mobileactions">
-        <button class="menutoggler" type="button" data-toggle="mobilemodal">Menü</button>
+        <button class="menutoggler" type="button" data-toggle="mobilemodal">Meni</button>
     </div>
 </header>
