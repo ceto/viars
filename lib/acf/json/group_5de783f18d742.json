@@ -117,6 +117,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_5e6ba531ccee2",
+            "label": "Type",
+            "name": "type",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5e3ad9e9871cf",
             "label": "Gross weight",
             "name": "gross_weight",
@@ -178,7 +197,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1580999737
+    "modified": 1593627534
 }

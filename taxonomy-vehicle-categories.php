@@ -49,7 +49,7 @@
         </div> -->
 <?php endif; ?>
 
-<?php if ($lead = get_field('vehicleslead', 'option')) : ?>
+<?php if ($lead = get_field('lead', $currentcat)) : ?>
     <div class="grid-container ps ps--nobottom ps--narrow">
         <div class="vlead">
             <?php echo $lead; ?>
