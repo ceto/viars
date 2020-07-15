@@ -1,0 +1,31 @@
+.strentable {
+    border-collapse: collapse;
+    line-height: 1.2;
+    /* border-spacing: .25em; */
+}
+.strentable img {
+    max-height:3em;
+    min-width:3em;
+    margin:0;
+}
+
+.strentable th {
+    font-weight: bold;;
+}
+
+.strentable td,
+.strentable th {
+    padding:.5em .25em;
+    border:1px solid #ddd;
+    vertical-align: middle;
+}
+
+.strentable tr:nth-child(2n) td,
+.strentable tr:nth-child(2n) th {
+    background-color: #efefef;
+}
+
+.strentable tbody tr:hover td,
+.strentable tbody tr:hover th {
+    background-color: #dfdfdf;
+}
