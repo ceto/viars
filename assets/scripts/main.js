@@ -12,9 +12,10 @@ $(".vehiclecard").on("click", ".startrequest", function(e) {
         $("#requestmodal #strradio input[type=radio]").prop('checked',true).prop('disabled',false);
         $('#requestmodal #strradio input[type=radio]').siblings('input[type=radio]').prop('checked', false);
         $("#requestmodal #ltrradio input[type=radio]").prop('disabled',false);
+
     } else {
         $("#requestmodal #strradio").css('display','none');
-        $("#requestmodal #ltrradio input[type=radio]").prop('checked',true).prop('disabled',true);
+        $("#requestmodal #ltrradio input[type=radio]").prop('checked',true);
         $("#requestmodal #strradio input[type=radio]").prop('disabled',true);
         $('#requestmodal #ltrradio input[type=radio]').siblings('input[type=radio]').prop('checked', false);
     }

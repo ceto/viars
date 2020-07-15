@@ -12,7 +12,7 @@ $("#contact_form").on("submit", function(ev, frm) {
     var user_address = $("input[name=r_address]").val();
     var user_msg = $("textarea[name=r_message]").val();
     var user_vehicle = $("input[name=r_vehicle]").val();
-    var user_time = $("input[name=r_time]").val();
+    var user_time = $("input[name=r_time]:checked").val();
     // var user_service = $("select[name=r_service]").val();
 
     var proceed = true;
