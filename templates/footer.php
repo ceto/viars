@@ -9,7 +9,7 @@
         <div class="icon icon-facebook"></div>
     </a>
 </aside>
-<?php if (!is_tax('vehicle-categories') && !is_post_type_archive('vehicle') && !is_singular('vehicle') ): ?>
+<?php if (!is_page_template('tmpl-shorttermrent.php') &&!is_tax('vehicle-categories') && !is_post_type_archive('vehicle') && !is_singular('vehicle') ): ?>
 <aside class="flmactions">
     <a href="#" data-toggle="contactmodal">PoŠalji poruku</a>
     <a href="tel:+38162425888">+381 62 425 888</a>
