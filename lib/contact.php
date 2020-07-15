@@ -32,6 +32,7 @@ if($_POST) {
   $user_Address = filter_var($_POST["userAddress"], FILTER_SANITIZE_STRING);
   $user_Message = filter_var($_POST["userMsg"], FILTER_SANITIZE_STRING);
   $user_Vehicle = filter_var($_POST["userVehicle"], FILTER_SANITIZE_STRING);
+  $user_STRVehicle = filter_var($_POST["userSTRVehicle"], FILTER_SANITIZE_STRING);
   $user_Time = filter_var($_POST["userTime"], FILTER_SANITIZE_STRING);
 
   $user_Message = str_replace("\&#39;", "'", $user_Message);
@@ -71,7 +72,7 @@ if($_POST) {
         <td colspan="2"><strong>Vehicle:</strong></td>
     </tr>
     <tr>
-        <td>&nbsp;</td><td><?= $user_Vehicle ?></td>
+        <td>&nbsp;</td><td><?= $user_Vehicle ?><?= $user_STRVehicle ?></td>
     </tr>
     <tr bgcolor="#EAF2FA">
         <td colspan="2"><strong>Name:</strong></td>
@@ -118,11 +119,11 @@ if($_POST) {
     </table>
     <br><hr><br>
     <?php $htmlcontent = ob_get_clean(); ?>
-  
+
   <?php
 
   $sentMail = @wp_mail($to_Email, $subject, $htmlcontent, $headers);
-  
+
 //   $sentMail = @wp_mail($to_Email, $subject, '<strong>Vehicle:</strong> '.$user_Vehicle. "\r\n". 'Name: '.$user_Name. "\r\n". 'E-mail: '.$user_Email. "\r\n" .'Phone: '.$user_Tel . "\r\n". 'Rental period: '.$user_Time. "\r\n" . 'Company: '.$user_Company. "\r\n" .'Address: '.$user_Address . "\r\n". "\r\n\n"  .' '.$user_Message, $headers);
 
   if(!$sentMail) {

@@ -12,6 +12,7 @@
     text-align: center;
     font-size: 1rem;
     border: 2px solid transparent;
+    text-decoration: none !important;
 
     &:hover,
     &:focus {
@@ -24,16 +25,21 @@
         border-color: $cl-primary;
         color: $cl-body-font-color;
 
+
         &:hover,
         &:focus {
             background-color: rgba(#fff, 0.75);
             border-color: $cl-secondary;
             color: $cl-primary;
+
         }
     }
 
     &.large {
         font-size: 1.25rem;
+    }
+    &.xlarge {
+        font-size: 1.75rem;
     }
     &.expanded {
         width: 100%;

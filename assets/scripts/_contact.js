@@ -12,6 +12,7 @@ $("#contact_form").on("submit", function(ev, frm) {
     var user_address = $("input[name=r_address]").val();
     var user_msg = $("textarea[name=r_message]").val();
     var user_vehicle = $("input[name=r_vehicle]").val();
+    var user_strvehicle = $("input[name=r_strvehicle]:checked").val();
     var user_time = $("input[name=r_time]:checked").val();
     // var user_service = $("select[name=r_service]").val();
 
@@ -43,6 +44,7 @@ $("#contact_form").on("submit", function(ev, frm) {
             userAddress: user_address,
             userMsg: user_msg,
             userVehicle: user_vehicle,
+            userSTRVehicle: user_strvehicle,
             userTime: user_time
         };
         $("#contact_submit").addClass("disabled");

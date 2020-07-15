@@ -6,6 +6,9 @@ $(document).ready(function() {
     //iFrameResize({ log: true }, ".deltaframe");
 });
 
+$(".js-startstrmodal").on("click", function(e) {
+});
+
 $(".vehiclecard").on("click", ".startrequest", function(e) {
     if ($(this).closest(".vehiclecard").find('[data-strenabled]').length===1) {
         $("#requestmodal #strradio").css('display','block');

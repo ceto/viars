@@ -32,3 +32,11 @@ msgstr ""
 #: tmpl-iframe.php:3
 msgid "Iframe template"
 msgstr ""
+
+#: tmpl-shorttermrent.php:3
+msgid "Shortterm Rent Template"
+msgstr ""
+
+#: tmpl-widepage.php:3
+msgid "Wide Page Template"
+msgstr ""

@@ -36,6 +36,9 @@ h6 {
             //border-color: get-color(primary);
         }
     }
+    a.button {
+        color:#fff;
+    }
     > * {
         // margin-left: auto;
         // margin-right: auto;
@@ -43,6 +46,14 @@ h6 {
 
         @include breakpoint($bp-xxxlarge) {
             max-width: $layout-content * 0.666 * 1.125;
+        }
+    }
+
+    &.wide > * {
+        max-width: $layout-content;
+
+        @include breakpoint($bp-xxxlarge) {
+            max-width: $layout-content * 1.125;
         }
     }
 
