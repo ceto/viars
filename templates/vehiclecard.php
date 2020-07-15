@@ -9,7 +9,6 @@
             <?php else: ?>
             <img width="768" height="576" src="https://placehold.it/768x576/?text=No+Photo+Available" alt="">
             <?php endif; ?>
-
         </a>
     </figure>
     <header>
@@ -55,12 +54,20 @@
                     <strong><?= $gross_weight ?></strong>
                 </p>
                 <?php endif; ?>
+                <?php if ( get_field('strenabled') ) :?>
+                <p class="vehiclecard__datarow" data-strenabled="1"><?php _e('Kratkoročno iznajmljivanje', 'viars'); ?>:
+                    <strong><?php _e('Dа', 'viars'); ?></strong>
+                </p>
+                <?php endif; ?>
 
 
             </div>
             <div class="vehiclecard__details__two">
                 <div>
                     <?php the_content(); ?>
+                    <?php if ( get_field('strenabled') ) :?>
+                    <img class="vehiclecard__banner" src="<?= get_stylesheet_directory_uri(); ?>/dist/images/short_term_renting_stamp.png" alt="">
+                    <?php endif; ?>
                 </div>
                 <a href="#" class="button startrequest"
                     data-toggle="requestmodal"><?php _e('zatražite ponudu','viars') ?></a>

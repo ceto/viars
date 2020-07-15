@@ -69,10 +69,9 @@
                     </div>
                     <fieldset class="cell small-12">
                         <legend>Period iznajmljivanja</legend>
-                        <label for="r_timeShort"><input type="radio" name="r_time" value="Kratkoročno iznajmljivanje (1-364 dana)"
+                        <label astyle="display:none;" id="strradio" for="r_timeShort"><input type="radio" name="r_time" value="Kratkoročno iznajmljivanje (1-364 dana)"
                                 id="r_timeShort">Kratkoročno iznajmljivanje (1-364 dana)</label>
-                        <label for="r_timeLong"><input type="radio" name="r_time" value="Dugoročno iznajmljivanje (duže od godinu dana)" id="r_timeLong"
-                                required>Dugoročno iznajmljivanje (duže od godinu dana)</label>
+                        <label id="ltrradio" for="r_timeLong"><input type="radio" name="r_time" value="Dugoročno iznajmljivanje (duže od godinu dana)" id="r_timeLong">Dugoročno iznajmljivanje (duže od godinu dana)</label>
                     </fieldset>
                     <div class="cell small-12">
                         <label>Poruka

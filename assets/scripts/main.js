@@ -7,12 +7,17 @@ $(document).ready(function() {
 });
 
 $(".vehiclecard").on("click", ".startrequest", function(e) {
-    // console.log(
-    //     $(this)
-    //         .closest(".vehiclecard")
-    //         .find(".vehiclecard__title")
-    //         .text()
-    // );
+    if ($(this).closest(".vehiclecard").find('[data-strenabled]').length===1) {
+        $("#requestmodal #strradio").css('display','block');
+        $("#requestmodal #strradio input[type=radio]").prop('checked',true).prop('disabled',false);
+        $('#requestmodal #strradio input[type=radio]').siblings('input[type=radio]').prop('checked', false);
+        $("#requestmodal #ltrradio input[type=radio]").prop('disabled',false);
+    } else {
+        $("#requestmodal #strradio").css('display','none');
+        $("#requestmodal #ltrradio input[type=radio]").prop('checked',true).prop('disabled',true);
+        $("#requestmodal #strradio input[type=radio]").prop('disabled',true);
+        $('#requestmodal #ltrradio input[type=radio]').siblings('input[type=radio]').prop('checked', false);
+    }
     $("#requestmodal .mobilemodal__head h3").text(
         $(this)
             .closest(".vehiclecard")
