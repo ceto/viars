@@ -3,6 +3,25 @@
     "title": "Vehicle Details",
     "fields": [
         {
+            "key": "field_5f0eca031c459",
+            "label": "Short term rent enabled",
+            "name": "strenabled",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5de783fddb9a2",
             "label": "Engine",
             "name": "engine",
@@ -180,25 +199,6 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
-        },
-        {
-            "key": "field_5f0eca031c459",
-            "label": "Short term rent enabled",
-            "name": "strenabled",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
         }
     ],
     "location": [
@@ -218,5 +218,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1594804887
+    "modified": 1594812186
 }
