@@ -12,15 +12,15 @@ $(".js-startstrmodal").on("click", function(e) {
 $(".vehiclecard").on("click", ".startrequest", function(e) {
     if ($(this).closest(".vehiclecard").find('[data-strenabled]').length===1) {
         $("#requestmodal #strradio").css('display','block');
-        $("#requestmodal #strradio input[type=radio]").prop('checked',true).prop('disabled',false);
-        $('#requestmodal #strradio input[type=radio]').siblings('input[type=radio]').prop('checked', false);
-        $("#requestmodal #ltrradio input[type=radio]").prop('disabled',false);
+        $("#requestmodal #strradio input[type=checkbox]").prop('disabled',false).prop('checked',false);
+        // $('#requestmodal #strradio input[type=checkbox]').siblings('input[type=checkbox]').prop('checked', false);
+        $("#requestmodal #ltrradio input[type=checkbox]").prop('disabled',false).prop('checked',false);
 
     } else {
         $("#requestmodal #strradio").css('display','none');
-        $("#requestmodal #ltrradio input[type=radio]").prop('checked',true);
-        $("#requestmodal #strradio input[type=radio]").prop('disabled',true);
-        $('#requestmodal #ltrradio input[type=radio]').siblings('input[type=radio]').prop('checked', false);
+        $("#requestmodal #ltrradio input[type=checkbox]").prop('checked',true).prop('disabled', true);
+        // $('#requestmodal #ltrradio input[type=checkbox]').siblings('input[type=checkbox]').prop('checked', false);
+        $("#requestmodal #strradio input[type=checkbox]").prop('checked', false).prop('disabled',true);
     }
     $("#requestmodal .mobilemodal__head h3").text(
         $(this)

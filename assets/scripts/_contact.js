@@ -13,7 +13,17 @@ $("#contact_form").on("submit", function(ev, frm) {
     var user_msg = $("textarea[name=r_message]").val();
     var user_vehicle = $("input[name=r_vehicle]").val();
     var user_strvehicle = $("input[name=r_strvehicle]:checked").val();
-    var user_time = $("input[name=r_time]:checked").val();
+
+    var user_time = '';
+    if ( $("input[name=r_time]:checked").length > 0 ) {
+        user_time = $("input[name=r_time]:checked").val();
+    }
+    var user_renttime = [];
+    $.each($('input[name="rent_time[]"]:checked'), function(){
+        user_renttime.push($(this).val());
+    });
+    user_time+=user_renttime.join(' | ');
+    // console.log(user_time);
     // var user_service = $("select[name=r_service]").val();
 
     var proceed = true;
