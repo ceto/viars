@@ -18,7 +18,7 @@
     </div>
 </div>
 
-<section id="contentstart" class="ps" data-magelllan-target="contentstart">
+<section id="contentstart" class="ps ps--nobottom" data-magelllan-target="contentstart">
     <div class="grid-container">
         <div class="bodycopy wide">
             <?php if (has_excerpt()) : ?>
@@ -57,7 +57,7 @@
     <ul class="catpromolist">
         <li>
             <div class="catpromotecard">
-                <h3>POGLEDAJTE NAšU PONODU!</h3>
+                <h3>POGLEDAJTE NAšU PONUDU!</h3>
             </div>
         </li>
         <?php foreach ($vcats as $vcat) : ?>

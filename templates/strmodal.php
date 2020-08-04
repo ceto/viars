@@ -78,18 +78,10 @@
                     <fieldset class="cell small-12 feles">
                         <legend>Izaberite period iznajmljivanja</legend>
                         <div class="radiogrid">
-                            <label for="r_time01"><input type="radio" name="r_time" value="Na 4 sata" id="r_time01">Na 4
-                                sata</label>
-                            <label for="r_time02"><input type="radio" name="r_time" value="1-3 dana" id="r_time02">1-3
-                                dana</label>
-                            <label for="r_time03"><input type="radio" name="r_time" value="4-7 dana" id="r_time03">4-7
-                                dana</label>
-                            <label for="r_time04"><input type="radio" name="r_time" value="K8-15 dana"
-                                    id="r_time04">8-15 dana</label>
-                            <label for="r_time05"><input type="radio" name="r_time" value="16-30 dana"
-                                    id="r_time05">16-30 dana</label>
-                            <label for="r_time06"><input type="radio" name="r_time" value="Preko 30 dana"
-                                    id="r_time06">Preko 30 dana</label>
+                            <label for="r_time01"><input type="radio" name="r_time" value="1-30 dana" id="r_time01">1-30 dana</label>
+                            <label for="r_time02"><input type="radio" name="r_time" value="1-3 meseca" id="r_time02">1-3 meseca</label>
+                            <label for="r_time03"><input type="radio" name="r_time" value="4-12 meseci" id="r_time03">4-12 meseci</label>
+                            <label for="r_time04"><input type="radio" name="r_time" value="Preko 12 meseci" id="r_time04">Preko 12 meseci</label>
                         </div>
                     </fieldset>
                     <p>&nbsp;</p>
