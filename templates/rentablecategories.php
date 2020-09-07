@@ -27,8 +27,7 @@
     <li>
         <div class="catpromotecard">
             <h3>BOLJE JE IZNAJMITI!</h3>
-            <p>Svet se menja tako brzo da je svima potrebno više fleksibilnosti. Iznajmljivanje posredstvom Viarent
-                pruža rešenje za to.</p>
+            <p>VIARENT FULL SERVICE iznajmljivanje vozila ima rešenje za sve transportne probleme i nudi jedinstvenu uslugu na tržištu za celokupni komercijalni program.</p>
         </div>
     </li>
 
@@ -38,7 +37,7 @@
 
     <li>
         <div class="catpromotecard">
-            <h3>Naše usluge su usmerene na Vaše potrebe!</h3>
+            <h3>NAŠE PONUDA JE USMERENA NA VAŠE SPECIFIČNE POTREBE!</h3>
         </div>
     </li>
 </ul>

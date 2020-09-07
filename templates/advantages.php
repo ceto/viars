@@ -4,8 +4,8 @@
         <figure>
         <div class="icon-calendar"></div>
         </figure>
-        <h3>PLANIRANI TROŠAK</h3>
-        <p>Izdatke za prevoz je moguće planirati, bez dodatnih troškova kao što su servis, porez, osiguranje itd. Vozila su spremna za preuzimanje čak i uz samo jednu plaćenu mesečnu naknadu.</p>
+        <h3>KONTROLA TROŠKOVA</h3>
+        <p>Nudimo potpunu kontrolu nad troškovima i jednostavno planiranje budžeta zahvaljujući fiksnim mesečnim izdacima. Vozila su spremna za preuzimanje uz plaćene samo 2 mesečne naknade.</p>
     </div>
 </li>
 <li>
@@ -13,8 +13,8 @@
         <figure>
         <div class="icon-service"></div>
         </figure>
-        <h3>VOZILO ZA ZAMENU - ODMAH</h3>
-        <p>Ne možete priuštiti da vozilo ostane van upotrebe - mi ćemo ga popraviti u najkraćem mogućem roku ili obezbediti rezervno vozilo.</p>
+        <h3>ZAMENSKO VOZILO</h3>
+        <p>Vozilo nikada nije van upotrebe – iznajmljeno vozilo servisiramo u najkraćem mogućem roku ili vam obezbeđujemo zamensko vozilo.</p>
     </div>
 </li>
 <li>
@@ -22,8 +22,8 @@
         <figure>
         <div class="icon-aesthetic"></div>
         </figure>
-        <h3>U ODLIČNOM TEHNIČKOM I ESTETSKOM STANJU</h3>
-        <p>Vozila će ostaviti dobre utiske kod vaših klijenata zbog redovnog održavanja koje obavlja Viarent.</p>
+        <h3>IZUZETNO TEHNIČKO I ESTETSKO STANJE</h3>
+        <p>Redovno održavana vozila kojima ćete moći da se ponosite pred vašim partnerima.</p>
     </div>
 </li>
 <li>
@@ -31,8 +31,8 @@
         <figure>
         <div class="icon-penny"></div>
         </figure>
-        <h3>EKONOMIČNO KORIŠĆENJE</h3>
-        <p>Naša moderna vozila imaju informacioni sistem koji olakšava proveru vozača i samog vozila. Ovim se može uštedeti ogromna količina goriva.</p>
+        <h3>EKONOMIČNA EKSPLOATACIJA</h3>
+        <p>ozila nove generacije imaju napredne i ekonomične motore gde pored smanjenja operativnih troškova postoji i značajan pozitivan uticaj na zaštitu životne sredine, što se nameće kao apsolutni imperativ odgovornih kompanija.</p>
     </div>
 </li>
 <li>
@@ -40,8 +40,8 @@
         <figure>
         <div class="icon-administration"></div>
         </figure>
-        <h3>MI UPRAVLJAMO ADMINISTRACIJOM</h3>
-        <p>Ako se ne bavite administrativnim procedurama, možete uštedeti i novac i vreme. Sve to obavljamo za vas, recimo, osiguranje, registracione formalnosti, poresku ili tehničku administraciju.</p>
+        <h3>SMANJENJE ADMINISTRACIJE NA MINIMUM</h3>
+        <p>VIARENT Srbija se brine o registraciji vozila, kao i osiguranjem od autoodgovornosti, Kasko osiguranjem i ostalim administrativnim procedurama.</p>
     </div>
 </li>
 <li>
@@ -49,8 +49,8 @@
         <figure>
         <div class="icon-freeze"></div>
         </figure>
-        <h3>FLEKSIBILNO PRILAGOĐAVANJE</h3>
-        <p>Zbog fleksibilne konstrukcije iznajmljivanja, možete se prilagoditi bilo kojoj vrsti zadatka i postati konkurentniji. Na primer, ako se vaš teretni zadatak promeni, ako su nastupile neke nove okolnosti, mi zamenjujemo vaše vozilo.</p>
+        <h3>FLEKSIBILNO IZNAJMLJIVANJE</h3>
+        <p>Odlučivši se za VIARENT fleksibilni koncept iznajmljivanja, garantujemo vam konkurentnost na tržištu. Ukoliko dođe do promena vaših potreba u izvršenju određenih zadataka u transportu tereta – obezbeđujemo vam odgovarajuće vozilo.</p>
     </div>
 </li>
 <li>
@@ -58,8 +58,8 @@
         <figure>
         <div class="icon-law"></div>
         </figure>
-        <h3>USAGLAŠENOST</h3>
-        <p>Pravni propisi postaju sve strožiji. Potrebno vam je prevozno sredstvo koje ispunjava sve propise.</p>
+        <h3>USAGLAŠENOST SA PROPISIMA</h3>
+        <p>Posebnu pažnju posvećujemo usaglašavanju sa sve strožim pravnim propisima čime osiguravamo da naši klijenti imaju na raspolaganju vozila koja ispunjavaju sve potrebne standarde.</p>
     </div>
 </li>
 <li>
@@ -68,7 +68,7 @@
         <div class="icon-bulby"></div>
         </figure>
         <h3>PERSONALIZOVAN DIZAJN</h3>
-        <p>Da li vam je važan imidž vaše kompanije? U slučaju dugoročnog iznajmljivanja, na vozilo možete staviti logotip vaše kompanije.</p>
+        <p>Dugoročno iznajmljena vozila je moguće brendirati prema potrebama vaše kompanije, čime dodatno gradite sopstveni imidž.</p>
     </div>
 </li>
 </ul>
