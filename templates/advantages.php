@@ -32,7 +32,7 @@
         <div class="icon-penny"></div>
         </figure>
         <h3>EKONOMIČNA EKSPLOATACIJA</h3>
-        <p>ozila nove generacije imaju napredne i ekonomične motore gde pored smanjenja operativnih troškova postoji i značajan pozitivan uticaj na zaštitu životne sredine, što se nameće kao apsolutni imperativ odgovornih kompanija.</p>
+        <p>Vozila nove generacije imaju napredne i ekonomične motore gde pored smanjenja operativnih troškova postoji i značajan pozitivan uticaj na zaštitu životne sredine, što se nameće kao apsolutni imperativ odgovornih kompanija.</p>
     </div>
 </li>
 <li>
