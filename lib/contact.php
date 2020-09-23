@@ -6,9 +6,10 @@ if($_POST) {
 //   $to_Email = "szabogabor@hydrogene.hu";
 //   $dev_Email = "szabogabi@gmail.com";
   $to_Email = "office@viarent.rs";
+  $copy_Email = "marija.paovic@sdtgroup.rs";
   $dev_Email = "szekelykalman@delta-truck.hu";
-  $subject = __('[DEV] VIARENT.RS | Prispeo zahtev za ponudu – Zakup.','viars');
-  $resp_subject = "[DEV] SDT GROUP D.O.O. | Viarent.rs - Hvala što ste nam se obratili";
+  $subject = __('VIARENT.RS | Prispeo zahtev za ponudu – Zakup.','viars');
+  $resp_subject = "SDT GROUP D.O.O. | Viarent.rs - Hvala što ste nam se obratili";
 
   if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
 
@@ -61,6 +62,7 @@ if($_POST) {
       'From: '.$user_Email,
       'Reply-To: '.$user_Email,
       'BCC: '.$dev_Email,
+      'CC: '.$copy_Email,
       'X-Mailer: PHP/' . phpversion(),
       'Content-Type: text/html; charset=UTF-8'
   );
