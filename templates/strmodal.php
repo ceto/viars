@@ -81,7 +81,7 @@
                             <label for="r_time01"><input type="radio" name="r_time" value="1-30 dana" id="r_time01">1-30 dana</label>
                             <label for="r_time02"><input type="radio" name="r_time" value="1-3 meseca" id="r_time02">1-3 meseca</label>
                             <label for="r_time03"><input type="radio" name="r_time" value="4-12 meseci" id="r_time03">4-12 meseci</label>
-                            <label for="r_time04"><input type="radio" name="r_time" value="Preko 12 meseci" id="r_time04">Preko 12 meseci</label>
+                            <label for="r_time04"><input type="radio" name="r_time" value="Godinu dana i duže" id="r_time04">Godinu dana i duže</label>
                         </div>
                     </fieldset>
                     <p>&nbsp;</p>

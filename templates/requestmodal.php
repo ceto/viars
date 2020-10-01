@@ -71,7 +71,7 @@
                         <legend>Period iznajmljivanja</legend>
                         <label id="strradio" for="r_timeShort"><input type="checkbox" name="rent_time[]" value="Kratkoročno iznajmljivanje (1-364 dana)"
                                 id="r_timeShort">Kratkoročno iznajmljivanje (1-364 dana)</label>
-                        <label id="ltrradio" for="r_timeLong"><input type="checkbox" name="rent_time[]" value="Dugoročno iznajmljivanje (duže od godinu dana)" id="r_timeLong">Dugoročno iznajmljivanje (duže od godinu dana)</label>
+                        <label id="ltrradio" for="r_timeLong"><input type="checkbox" name="rent_time[]" value="Dugoročno iznajmljivanje (godinu dana i duže)" id="r_timeLong">Dugoročno iznajmljivanje (godinu dana i duže)</label>
                     </fieldset>
                     <div class="cell small-12">
                         <label>Poruka
